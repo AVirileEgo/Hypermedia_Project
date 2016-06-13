@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Binkies iframe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+    
+    <script src="https://az589851.vo.msecnd.net/scripts/v14/utils.js"></script>
+
+    <script>
+        
+        var settings = {"playerLocation":"https://az589851.vo.msecnd.net/players/v14/player.js","handVisible":true,"autoLoading":true,"accessKey":"RzHP779D","contentId":"IPHONE6S - 903","referrer":"http://www.vodafone.it/portal/Privati/Tariffe-e-Prodotti/Prodotti/Smartphone/Scheda-iPhone-6s","id":"binkies-content","iframeViewId":"I71DvPHaFQJIcpH2","viewId":"I71DvPHaFQJIcpH2","statsUrl":"https://embed.binki.es","statsToken":null,"visitorId":"fsOAdVLsOnRdmnTZ","sessionId":"TbYzPTWX7tCPEknZ","barFileUrl":"https://az589851.vo.msecnd.net/490mz7g4afruqtgjokgb/model-1636880.bar","startTimestamp":1465057012940,"galleryBookmarks":["front","left","back"],"navigationFocus":"product","navigationMargin":50,"autoRotationEnabled":true,"backgroundColor":"#ffffff","backgroundTransparent":true,"lightmapUrl":"//az589851.vo.msecnd.net/lightmaps/js/photo-studio-with-umbrella-1-143752.bar","yaw":180,"pitch":0,"roll":0,"fieldOfView":22};
+
+        
+        var javascripts =
+        [
+            "https://az589851.vo.msecnd.net/scripts/v14/playerbar.js",
+            "https://az589851.vo.msecnd.net/scripts/v14/loadingbar.js"
+        ];
+
+        
+        var stylesheets =
+        [
+            "https://az589851.vo.msecnd.net/stylesheets/v14/binkies.css",
+            "https://az589851.vo.msecnd.net/stylesheets/v14/playerbar.css",
+            "https://az589851.vo.msecnd.net/stylesheets/v14/loadingbar.css"
+        ];
+
+        
+        
+        stylesheets.push("https://az589851.vo.msecnd.net/stylesheets/v14/hand.css");
+        javascripts.push("https://az589851.vo.msecnd.net/scripts/v14/hand.js");
+        
+                    stylesheets.push("//binkiescontentnode.blob.core.windows.net/content/RzHP779D/product-page-v2.css");
+                    
+        var startTimestamp = settings.startTimestamp;
+        var iframeLoaded = Date.now() - startTimestamp;
+        
+
+        
+        function SendMessage(message)
+        {
+            
+            message.timestamp = new Date().getTime() - startTimestamp;
+
+            
+            parent.postMessage(JSON.stringify(message), "*");
+        }
+
+        
+        function ReceiveMessage(event)
+        {
+            
+            if (event && event.data)
+            {
+                
+                var message = JSON.parse(event.data);
+
+                
+                if (message.command)
+                {
+                    
+                    var command = message.command.toLowerCase();
+
+                    
+                    if (command === "mousemove" && (typeof message.x !== "undefined") && (typeof message.y !== "undefined") && player !== null)
+                    {
+                        if(typeof pointerTimeline === "undefined" || pointerTimeline == null)
+                            player.MouseMove(message.x, message.y);
+                    }
+
+                        
+                    else if (command === "mouseup" && (typeof message.button !== "undefined") && player !== null)
+                    {
+                        if(typeof pointerTimeline === "undefined" || pointerTimeline == null)
+                            player.MouseUp(message.button);
+                    }
+
+                        
+                    else if (command === "switchcontent" && (typeof message.id !== "undefined"))
+                    {
+                        SwitchContent("RzHP779D", message.id, message.index);
+                    }
+
+                        
+                    else if (command === "setstacking" && (typeof message.value !== "undefined") && player !== null)
+                    {
+                        player.SetStacking(message.value);
+                    }
+                        
+                    else if(command === "startloading")
+                    {
+                        
+                        if(player === null && !(lastResponse.failed || lastResponse.playerLocation === null))
+                        {
+                            
+                            settings.autoLoading = true;
+
+                            
+                            insertStylesheetAndScripts(lastResponse);
+                        }
+                    }
+                }
+            }
+        }
+
+        
+        if (window.addEventListener)
+        {
+            window.addEventListener("message", ReceiveMessage, false);
+        }
+            
+        else if (window.attachEvent)
+        {
+            window.attachEvent("onmessage", ReceiveMessage);
+        }
+
+        
+        var readyMessageSend = false;
+
+        
+        function SendReadyMessage()
+        {
+            if(readyMessageSend)
+            {
+                return;
+            }
+            
+            var message = {
+                command: "ready"
+            };
+
+            
+            SendMessage(message);
+
+            
+            readyMessageSend = true;
+        };
+
+        
+        function SendNo3DMessage()
+        {
+            
+            var message = {
+                errorCode: 1001,
+                command: "error",
+            };
+
+            
+            SendMessage(message);
+        };
+
+        
+        function SendEmbedFailedMessage()
+        {
+            
+            var message = {
+                errorCode: 1002,
+                command: "error"
+            };
+
+            
+            SendMessage(message);
+        }
+
+        
+        function RegisterContentType(viewId, contentType, supports3DStatus)
+        {
+            
+            if(supports3DStatus != "")
+                contentType += " (" + supports3DStatus + ")";
+
+            
+            var statsData =
+            {
+                ViewId: viewId,
+                IframeLoaded: iframeLoaded,
+                ContentType: contentType
+            }
+
+            
+            BinkiesUtils.makePostRequest("https://embed.binki.es/poststats", statsData, true);
+
+            
+            if (window.performance == null || typeof window.performance.getEntriesByType !== 'function')
+            {
+                
+            } else {
+                
+                var timings = window.performance.timing;
+                var connection = timings.connectEnd - timings.connectStart;
+                var request = timings.responseStart - timings.requestStart;
+                var response = timings.responseEnd - timings.responseStart;
+
+                 
+                var eventRequest = new XMLHttpRequest();
+                eventRequest.open("POST", "https://embed.binki.es/registerevent");
+                eventRequest.setRequestHeader("Content-type", "application/json; charset=utf-8");
+
+                var payload = {
+                    accessKey: "RzHP779D",
+                    visitorID: "fsOAdVLsOnRdmnTZ",
+                    visitID: "TbYzPTWX7tCPEknZ",
+                    eventType: "Event",
+                    eventName: "EmbedPerformance",
+                    eventData: connection + " / " + request + " / " + response,
+                };
+                eventRequest.send(JSON.stringify(payload));
+            }
+        }
+
+        
+        var player = null;
+
+        
+        var playerCreatedCallbacks = [];
+
+        
+        function onPlayerCreated(callback)
+        {
+            
+            if(player != null)
+            {
+                
+                callback(player);
+            }
+            else
+            {
+                
+                playerCreatedCallbacks.push(callback);
+            }
+        }
+
+        
+        function createPlayer(settings)
+        {
+            
+            player = BinkiesWebGL.CreatePlayer(settings);
+
+            
+            for (var i = 0; i < playerCreatedCallbacks.length; i++)
+            {
+                playerCreatedCallbacks[i](player);
+            }
+
+            
+            player.AddEventListener("contentloaded", function()
+            {
+                
+                var message = {
+                    command: "contentloaded"
+                };
+
+                
+                SendMessage(message);
+            });
+
+            
+            player.AddEventListener("engaged", function()
+            {
+                
+                var message = {
+                    command: "engaged"
+                };
+
+                
+                SendMessage(message);
+            });
+        }
+
+        /**
+         * Inserts the stylesheet and scripts that have been registered.
+         * @param settings A settings object containing the player location
+         */
+        function insertStylesheetAndScripts(settings)
+        {
+            
+            javascripts.splice(0, 0, settings.playerLocation);
+
+            
+            BinkiesUtils.insertStylesheets(stylesheets);
+
+            
+            BinkiesUtils.insertJavascriptFiles(javascripts, function(loadedScript)
+            {
+                
+                if(loadedScript === settings.playerLocation)
+                {
+                    
+                    createPlayer(settings);
+                }
+            });
+        }
+
+        
+        var embedResponses = [];
+        var lastResponse;
+
+        
+        embedResponses.push(settings);
+
+        
+        function SwitchContent(accessKey, contentId, index)
+        {
+            
+            if (contentId === null && index > 0)
+            {
+                
+                if(player != null)
+                {
+                    
+                    player.SwitchContent(null, index);
+                }
+
+                
+                return;
+            }
+
+            
+            for (var i = 0; i < embedResponses.length; i++)
+            {
+                
+                var responseData = embedResponses[i];
+
+                
+                lastResponse = responseData;
+
+                
+                if(responseData.accessKey === accessKey && responseData.contentId === contentId)
+                {
+                    
+                    if(settings.autoLoading)
+                    {
+                        
+                        if(responseData.failed !== "undefined" && !responseData.failed)
+                        {
+                            
+                            player.SwitchContent(responseData, index);
+
+                            
+                            SendReadyMessage();
+                        }
+                        else
+                        {
+                            
+                            SendEmbedFailedMessage();
+                        }
+                    }
+
+                    
+                    return;
+                }
+            }
+
+            
+            BinkiesUtils.makeGetRequest("https://embed.binki.es/contentsettings/v2/" + accessKey + "/" + contentId,
+            {
+                visitorId: settings.visitorId || "",
+                sessionId: settings.sessionId || "",
+                viewId: settings.iframeViewId,
+                settings: BinkiesUtils.getURLParameter("settings"),
+                startTimestamp: new Date().getTime()
+            },
+            true,
+            function (responseData)
+            {
+                
+                lastResponse = responseData;
+
+                
+                responseData.accessKey = accessKey;
+                responseData.contentId = contentId;
+
+                
+                embedResponses.push(responseData);
+
+                
+                if(settings.autoLoading)
+                {
+                    
+                    if (player === null)
+                    {
+                        
+                        insertStylesheetAndScripts(responseData);
+                    }
+                    else
+                    {
+                        
+                        player.SwitchContent(responseData, index);
+                    }
+                }
+
+                
+                if(!supports3D)
+                {
+                    
+                    RegisterContentType(settings.viewId, "No3D", supports3DStatus);
+
+                    
+                    SendNo3DMessage();
+                }
+                else
+                {
+                    
+                    RegisterContentType(responseData.viewId, "3D", supports3DStatus);
+
+                    
+                    SendReadyMessage();
+                }
+            },
+            function () {
+                
+                lastResponse = {
+                    accessKey: accessKey,
+                    contentId: contentId,
+                    failed: true
+                }
+
+                
+                SendEmbedFailedMessage();
+
+                
+                embedResponses.push(lastResponse);
+            });
+        }
+
+    </script>
+</head>
+<body style="width: 100%; height: 100%; overflow: hidden" class="loading windowed">
+    <div id="binkies-content" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px;"></div>
+
+    <script>
+         
+        var supports3D = false;
+        var supports3DStatus;
+
+        
+        BinkiesUtils.supports3D(function(result, status)
+        {
+            
+            supports3D = result;
+            supports3DStatus = status;
+
+            
+            var haveContent = settings.playerLocation !== null;
+
+            
+            lastResponse = settings;
+
+            
+            if(!haveContent)
+            {
+                
+                SendEmbedFailedMessage();
+            }
+                
+            else if (!supports3D)
+            {
+                
+                RegisterContentType(settings.viewId, "No3D", supports3DStatus);
+
+                
+                SendNo3DMessage();
+            }
+                
+            else
+            {
+                
+                if(settings.autoLoading)
+                {
+                    
+                    insertStylesheetAndScripts(settings);
+                }
+
+                
+                RegisterContentType(settings.viewId, "3D", supports3DStatus);
+
+                
+                SendReadyMessage();
+            }
+        });
+    </script>
+</body>
+</html>
