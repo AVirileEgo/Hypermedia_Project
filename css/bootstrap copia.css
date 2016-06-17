@@ -1342,7 +1342,7 @@ mark,
 }
 a.text-primary:hover,
 a.text-primary:focus {
-  color: #286090;
+  color: #289190;
 }
 .text-success {
   color: #3c763d;
@@ -1378,7 +1378,7 @@ a.text-danger:focus {
 }
 a.bg-primary:hover,
 a.bg-primary:focus {
-  background-color: #286090;
+  background-color: #289190;
 }
 .bg-success {
   background-color: #dff0d8;
@@ -3130,19 +3130,19 @@ fieldset[disabled] .btn-default.focus {
 .btn-primary:focus,
 .btn-primary.focus {
   color: #fff;
-  background-color: #286090;
+  background-color: #289190;
   border-color: #122b40;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #286090;
+  background-color: #289190;
   border-color: #204d74;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #fff;
-  background-color: #286090;
+  background-color: #289190;
   border-color: #204d74;
 }
 .btn-primary:active:hover,
@@ -4227,7 +4227,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 860px) {
+@media (min-width: 891px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4927,7 +4927,7 @@ a.label:focus {
 }
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-  background-color: #286090;
+  background-color: #289190;
 }
 .label-success {
   background-color: #5cb85c;
