@@ -1188,6 +1188,7 @@ h6,
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
+    margin-left: 10px;
 }
 h1 small,
 h2 small,
@@ -7014,7 +7015,78 @@ border: 0px solid;}
 .categorie:hover,
 .categorie:focus{
     background-color: #f5f5f5;
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+    opacity: 1;
     }
 
+.assistenza
+{
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    vertical-align: middle;
+    margin-right: 20px;
+}
 
+
+.carousel-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15%;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+
+  background-color: rgba(0, 0, 0, 0);
+  
+}
+.carousel-control.go {
+    position: relative;
+    color: #0060a6;
+    border-color: white;
+  background-repeat: repeat-x;
+}
+.prova
+{
+    color: #0060a6; 
+    text-align:left; 
+    line-height: 40px;
+}
+
+.prova:hover,
+.prova:focus
+{
+    color: red; 
+    text-align:left; 
+    line-height: 40px;
+    -webkit-transform: scale(1.05,1.05);
+    -moz-transform: scale(1.05,1.05);
+    -o-transform: scale(1.05,1.05);
+    -ms-transform: scale(1.05,1.05);
+    transform: scale(1.05,1.05);
+    opacity: 0.7;
+    
+}
+
+img.zoom:hover {
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+    opacity: 0.7;
+}
+img.zoom {
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
 /*# sourceMappingURL=bootstrap.css.map */
