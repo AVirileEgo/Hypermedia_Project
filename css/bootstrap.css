@@ -7012,16 +7012,6 @@ border: 0px solid;}
     padding: 20px;
 }
 
-.categorie:hover,
-.categorie:focus{
-    background-color: #f5f5f5;
-    -webkit-transform: scale(1.1,1.1);
-    -moz-transform: scale(1.1,1.1);
-    -o-transform: scale(1.1,1.1);
-    -ms-transform: scale(1.1,1.1);
-    transform: scale(1.1,1.1);
-    opacity: 1;
-    }
 
 .assistenza
 {
