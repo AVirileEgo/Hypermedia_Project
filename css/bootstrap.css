@@ -5515,6 +5515,8 @@ button.list-group-item-danger.active:focus {
 }
 .panel {
   margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -5529,6 +5531,10 @@ button.list-group-item-danger.active:focus {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+    background: -webkit-linear-gradient(#001299, #001260); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#001299, #001260); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#001299, #001260); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#001299, #001260); /* Standard syntax */
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -7064,6 +7070,14 @@ border: 0px solid;}
     
 }
 
+
+.categorie:hover,
+.categorie:focus
+{
+    background-color: #FFFFFF;
+    
+}
+
 img.zoom:hover {
     -webkit-transform: scale(1.1,1.1);
     -moz-transform: scale(1.1,1.1);
@@ -7079,4 +7093,28 @@ img.zoom {
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
 }
+
+img.zoom2:hover {
+    border:5px solid;
+    border-color: #001299;
+    -webkit-transform: scale(1.1,1.1);
+    -moz-transform: scale(1.1,1.1);
+    -o-transform: scale(1.1,1.1);
+    -ms-transform: scale(1.1,1.1);
+    transform: scale(1.1,1.1);
+    opacity: 1;
+}
+img.zoom2 {
+    border:5px solid ;
+    border-color: #E8E8E8;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+}
+
+
 /*# sourceMappingURL=bootstrap.css.map */
