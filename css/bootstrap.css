@@ -6317,6 +6317,7 @@ button.close {
   position: relative;
   width: 100%;
   overflow: hidden;
+    background: white;
 }
 .carousel-inner > .item {
   position: relative;
@@ -6404,22 +6405,12 @@ button.close {
   
 }
 .carousel-control.left {
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .0001) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .1)), to(rgba(0, 0, 0, .0001)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .0001) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
-  background-repeat: repeat-x;
+  
 }
 .carousel-control.right {
   right: 0;
   left: auto;
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .1) 100%);
-  background-image:      -o-linear-gradient(left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .1) 100%);
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, .0001)), to(rgba(0, 0, 0, .1)));
-  background-image:         linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
-  background-repeat: repeat-x;
+  
 }
 .carousel-control:hover,
 .carousel-control:focus {
@@ -7050,7 +7041,7 @@ border: 0px solid;}
 }
 .prova
 {
-    color: #0060a6; 
+    color: #337ab7; 
     text-align:left; 
     line-height: 40px;
 }
@@ -7115,6 +7106,33 @@ img.zoom2 {
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
 }
+.chiamate{
+    border-radius: 7px;
+    height: 80px;
+    background: -webkit-linear-gradient(#00e100, #00ff00,#00e100); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#00e100, #00ff00,#00e100); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#00e100, #00ff00,#00e100); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#00e100, #00ff00,#00e100); /* Standard syntax */
+}
+
+.sms{
+    border-radius: 7px;
+    height: 80px;
+    background: -webkit-linear-gradient(#0080c0, #00a0e0,#0080c0); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0080c0, #00a0e0,#0080c0); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0080c0, #00a0e0,#0080c0); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0080c0, #00a0e0,#0080c0); /* Standard syntax */
+}
+
+.internet{
+    border-radius: 7px;
+    height: 80px;
+    background: -webkit-linear-gradient(#e01f25, #ff1f35,#e01f25); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#e01f25, #ff1f35,#e01f25); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#e01f25, #ff1f35,#e01f25); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#e01f25, #ff1f35,#e01f25); /* Standard syntax */
+}
+
 
 
 /*# sourceMappingURL=bootstrap.css.map */
