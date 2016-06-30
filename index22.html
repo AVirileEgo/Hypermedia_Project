@@ -5,14 +5,16 @@
 <script>
 			$( document ).ready(function() {
 
-				$.getJSON( "http://localhost/blog/prova.php?type=prova", function( data ) {
-                    var stograncazzo=data[0].Descrizione
+				$.getJSON( "http://localhost/prova2.php?type=prova")
+                .done(function(json){
+                    var stograncazzo=json[0].idAssistenza;
                     $("#contenuto").append(stograncazzo);
                     
                     
 
                    
-                          });
+                          })
+                .fail(function(){alert("culo")});
                 });
     </script>
 </head>
