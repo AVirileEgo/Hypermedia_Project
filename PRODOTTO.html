@@ -17,6 +17,123 @@
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+			$( document ).ready(function() {
+
+				$.getJSON( "http://localhost/prova2.php?type=smartphone&prodotto=1")
+                .done(function(json){
+                    
+
+                    var Nome=json[0].Nome;
+                    $("#Nome").prepend(Nome);
+                    var Percorso=json[0].Nome;
+                    $("#Percorso").prepend(Percorso);
+                    var Marca=json[0].Marca;
+                    $("#Marca").prepend(Marca);
+                    var Prezzo=json[0].Prezzo;
+                    $("#Prezzo").prepend(Prezzo);
+                    var Descrizione=json[0].Descrizione;
+                    $("#Descrizione").prepend(Descrizione);
+                    var Caratteristiche=json[0].Caratteristiche;
+                    $("#Caratteristiche").prepend(Caratteristiche);
+                    var Specifiche=json[0].Specifiche;
+                    $("#Specifiche").prepend(Specifiche);
+
+                    
+                    if(json[0].IMG!=undefined){
+                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[0].IMG+"\"></div>"
+                        $("#cicloofferte").append(div);
+                        appoggio= new Array();
+                        appoggio.push(json[0].IMG);
+                        
+                        
+                        if(json[1].IMG!=undefined){
+                        for(i=1;i<json.length;i++)
+                        {
+                            verifica=1;
+                            for (y=0;y<i;y++)
+                            {
+                                if(json[i].IMG==appoggio[y])
+                                {
+                                    verifica=0;
+                                }
+                            }
+                            if (verifica!=0){
+                                var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[y].IMG+"\"></div>"
+                                $("#cicloofferte").append(div);
+                                appoggio.push(json[y].IMG);
+                            }
+                        }
+                        
+                        }
+                        
+                        }
+                    else 
+                    {
+                        var div="<div class=\"col-lg-12 col-sm-12 col-xs-12\" style=\" padding:10px;\"><h4 style=\"color:grey;\"><b>CI DISPIACE!!<br/><br/>Al momento esistono offerte abbinabili all'acquisto di questo prodotto</b></h4></div>"
+                    $("#cicloofferte").append(div)
+                    }
+                    
+                    
+                    
+                    var Immagine1="<img src=\"img/Prodotti/"+json[0].IMG_front+"\" alt=\"errore caricamento img\">";
+                    $("#Immagine1").append(Immagine1);
+                    
+                    var Immagine2="<img src=\"img/Prodotti/"+json[0].IMG_side+"\" alt=\"errore caricamento img\">";
+                    $("#Immagine2").append(Immagine2);
+                    
+                    var Immagine3="<img src=\"img/Prodotti/"+json[0].IMG_back+"\" alt=\"errore caricamento img\">";
+                    $("#Immagine3").append(Immagine3);
+                    
+                   
+                    
+                    
+                    
+                    if(json[0].Titolo!=undefined){
+                        var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"assistenza.html\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[0].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
+                        $("#cicloassistenza").append(div1);
+                        appoggio1= new Array();
+                        appoggio1.push(json[0].Titolo);
+                        
+                        
+                        if(json[1].Titolo!=undefined){
+                        for(i=1;i<json.length;i++)
+                        {
+                            verifica=1;
+                            for (y=0;y<i;y++)
+                            {
+                                if(json[i].Titolo==appoggio1[y])
+                                {
+                                    verifica=0;
+                                }
+                            }
+                            if (verifica!=0){
+                                var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"assistenza.html\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[y].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
+                                $("#cicloassistenza").append(div1);
+                                appoggio1.push(json[y].Titolo);
+                            }
+                        }
+                        
+                        }
+                        
+                        }
+                    else 
+                    {
+                        var div1="<div class=\"col-lg-12 col-sm-12 col-xs-12\" style=\" padding:10px;\"><h4 style=\"color:grey;\"><b>CI DISPIACE!!<br/><br/>Al momento esistono pagine di assistenza per questo prodotto</b></h4></div>"
+                        $("#cicloassistenza").append(div1)
+                    }
+                    
+                
+                    
+    
+                    
+                    
+                          })
+                .fail(function(){alert("errore")});
+                });
+    </script>
+  
  </head>
  <body>
  
@@ -90,8 +207,8 @@
 
 <div class="contenitorepercorso">
 <ol class="breadcrumb">
-  <li><a href="Index.html">Home</a></li>
-  <li>Prodotti - Tutti i Prodotti</li>
+  <li>Tutti i Prodotti</li>
+  <li id="Percorso"></li>
 </ol>
 </div>
  
@@ -113,16 +230,15 @@
  
   <!-- Wrapper for slides -->
   <div class="carousel-inner" style="background:white;">
-    <div class="item active">
-      <img src="img/Prodotti/apple-iPhone6s_F1.jpg" alt="...">
+    <div class="item active" id="Immagine1">
       
     </div>
-    <div class="item">
-       <img src="img/Prodotti/apple-iPhone6s_S.jpg" alt="...">
+    <div class="item" id="Immagine2">
+       
       
     </div>
-    <div class="item">
-       <img src="img/Prodotti/apple-iPhone6s_B.jpg" alt="...">
+    <div class="item" id="Immagine3">
+       
     </div>
   </div>
  
@@ -137,22 +253,12 @@
   </a>
     </div>
     <div class="col-lg-7 col-sm-7 col-xs-12" style="background: transparent; padding-left:20px;" >
-        <h1 style="text-align:left; color:#337ab7;">APPLE IPHONE 6s</h1>
+       <h1 style="text-align:left; color:#337ab7;float:left;margin-right:10px;" id="Marca"> </h1>
+        <h1 style="text-align:left; color:#337ab7;" id="Nome"></h1>
         <h3 style="text-align:left;">Caratteristiche tecniche</h3>
-        <p style="text-align:left; font-size:20px;">
-    - Display Retina da 4" con risoluzione di 1136x640 pixel" HD<br/>
+        <p style="text-align:left; font-size:20px;" id="Caratteristiche"> </p>
 
-    - Chip A9 con architettura a 64 bit<br/>
-
-    - Fotocamera iSight da 12MP con Focus Pixels e flash True Tone<br/>
-
-    - Registrazione video 4K a 30fps, moviola a 240 fps<br/>
-
-    - Videocamera FaceTime HD (foto da 1,2 MP) con Retina Flash<br/>
-
-    - Sensore di impronte digitali Touch ID<br/></p>
-
-    <div style="color:#337ab7; text-align:left;"><h2><b>699,99 €</b></h2></div>
+    <div style="color:#337ab7; text-align:left;"><h2 id="Prezzo"><b> €</b></h2></div>
     <br/>
     <button type="button" class="btn btn-primary btn-large btn-block" style="max-width:200px;">Aggiungi al carrello</button>
     
@@ -171,26 +277,10 @@
 
 <div class="tab-content">
   <div id="home" class="tab-pane fade in active">
-    <p style="font-size:18px; text-align:left; padding:10px;">Il telefono da 4" più potente di sempre. iPhone SE riprende un design compatto di grande successo aggiungendovi due fotocamere evolute e una potenza di elaborazione incredibile.Disegnato per stare comodamente in mano e risultare piacevole al tatto, grazie alla finitura satinata del guscio in alluminio microsabbiato.<br/>
-
-iPhone SE ha un display Retina da 4’’, chip A9 con archittetura a 64 bit di livello desktop, sensore di impronte digitali Touch ID, fotocamera iSight da 12MP, videocamera FaceTime HD con Retina flash, Live Photos e connessioni Wi-Fi e 4G veloci. E ancora, iOS 9 e iCloud.<br/></p>
+    <p style="font-size:18px; text-align:left; padding:10px;" id="Descrizione"><br/></p>
   </div>
   <div id="menu1" class="tab-pane fade">
-    <p style="font-size:18px; text-align:left; padding:10px;">Retina Multi-Touch widescreen retroilluminato LED da 4" (diagonale) 1136x640 pixel a 326 ppi<br/>
-
-Processore: Chip A9 con architettura a 64 bit, Coprocessore di movimento M9 integrato<br/>
-
-Fotocamera: Fotocamera iSight da 12 megapixel<br/>
-
-Videocamera: FaceTime HD<br/>
-
-Sensori: Sensore di impronte digitali Touch ID<br/>
-
-Connettivita: 4G LTE1<br/>
-
-SistemaOperativo: iOS 9 e iCloud<br/>
-
-Colori: Disponibile in Space Grey, Silver, Gold e Rose Gold<br/></p>
+    <p style="font-size:18px; text-align:left; padding:10px;" id="Specifiche"></p>
   </div>
   
 </div></div>
@@ -198,27 +288,24 @@ Colori: Disponibile in Space Grey, Silver, Gold e Rose Gold<br/></p>
     
     <div class="row" style="border:5px solid #e8e8e8; margin-left:10px; margin-right:10px;">
         <div class="col-lg-12 col-sm-12 col-xs-12" style="background: #e8e8e8; padding:10px;">
-           
-            <h2 style="color:#337ab7"><b>Disponibile in offerta mobile con i seguenti servizi Smart Life</b></h2>
+           <h2 style="color:#337ab7"><b>Offerte Smart Life abbinabili all'acquisto:</b></h2>
         </div> 
+    <div id="cicloofferte">
         
-        <div class="col-lg-6 col-sm-6 col-xs-12" style="padding:10px;"><img class="zoom2 flex" src="img/SmartLife/young.png"></div>
-        <div class="col-lg-6 col-sm-6 col-xs-12" style="padding:10px;"><img class="zoom2 flex" src="img/SmartLife/stimsmartmobile.png"></div>
-        
+    </div>
     </div>
     
     <div class="row" style="border:5px solid #e8e8e8;margin-top:30px; margin-left:10px; margin-right:10px; text-align:center; background-color:#e8e8e8;">
-       <h4 style="color:#337ab7"><b>Supporto tecnico a disposizione:</b></h4>
-       <div class="col-lg-6 col-sm-6 col-xs-12 pull-left" style="padding-top:20px;"><img src="img/Assistenza/categoria-assistenza-3.png" class="flex"></div>
-       <div class="col-lg-6 col-sm-6 col-xs-12">
-       <a href="assistenza.html" style="text-decoration: none">
-       <div class="assistenza"><h4 class="prova">Gestione Linea e Servizi<div class="pull-right"><span class="glyphicon glyphicon-circle-arrow-right"></span></div></h4></div></a></div>
+       <div class="col-lg-12 col-sm-12 col-xs-12" style="padding-top:0px;"><h4 style="color:#337ab7"><img src="img/Assistenza/categoria-assistenza-3.png" class="flex" style="hight:25px; width:25px; margin-right:15px;text-align:center;"><b>Supporto tecnico a disposizione:</b></h4></div>
+       
+       <div id="cicloassistenza">
+       </div>
         
         
     </div>
      
      
-     
+    
      
 
      </div>

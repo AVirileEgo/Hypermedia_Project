@@ -17,6 +17,28 @@
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script>
+			$( document ).ready(function() {
+
+				$.getJSON( "http://localhost/prova2.php?type=alloff")
+                .done(function(json){
+                    
+                    for(i=0;i<json.length;i++){
+                    
+                        
+                        
+                    var elenco="<div class=\"col-lg-3 col-sm-6 col-xs-6\" style=\"background: transparent; margin-bottom:20px\" ><img class=\"zoom2\" src=\"img/SmartLife/"+json[i].IMG+"\"></div>"
+                    $("#alloff").append(elenco);
+                    }
+                
+                    
+
+                   
+                          })
+                .fail(function(){alert("errore")});
+                });
+    </script>
  </head>
  <body>
  
@@ -98,17 +120,8 @@
  
 
 <div class="contenitorepagina">
-<div class="row">
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
-  </div>
-  <div class="row">
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><img class="zoom2" src="img/home/stimsmartcasa.png"></div>
+<div class="row" id="alloff">
+  		
   </div>
 
  </div>

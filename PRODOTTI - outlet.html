@@ -17,6 +17,26 @@
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+			$( document ).ready(function() {
+
+				$.getJSON( "http://localhost/prova2.php?type=outlet")
+                .done(function(json){
+                    
+                    for(i=0;i<json.length;i++){
+                    
+                    var div="<div class=\"col-lg-3 col-sm-3 col-xs-6\" style=\"background: transparent\"><div class=\"bordo\" style=\"padding-top:10px; margin:5px;\"><div class=\"immagine\" style=\"padding:10px;\"><a href=\"\"><img class=\"flex zoom2\" style=\"border:0px;\" src=\"img/Prodotti/"+json[i].IMG_FRONT+"\" ></a></div><p class=\"nome\" style=\"padding-top:10px;\" id=\"Nome\">"+json[i].Nome+"</p><p class=\"prezzo\" id=\"Prezzo\">"+json[i].Prezzo+" €</p></div></div>";
+                    $("#outlet").append(div);
+                    }
+                
+                    
+
+                   
+                          })
+                .fail(function(){alert("errore")});
+                });
+    </script>
  </head>
  <body>
  
@@ -100,140 +120,16 @@
 <div class="contenitorepagina">
 <div class="row">
   		<div class="col-lg-12 col-sm-12 col-xs-12" style="background: transparent" >
-  		    <div class="contenuto">
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/iphone.png" ></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                 <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/iphone.png" ></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                 <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/iphone.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                 <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/iphone.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
+  		    <div class="contenuto" id="outlet">
+                
             </div>
-  		</div><br/>
-  		<div class="col-lg-12 col-sm-12 col-xs-12" style="background: transparent" >
-  		    <div class="contenuto">
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/ipad.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TABLET</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/ipad.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TABLET</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/ipad.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TABLET</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/ipad.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TABLET</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-            </div>
-  		</div><br/>
-  		<div class="col-lg-12 col-sm-12 col-xs-12" style="background: transparent" >
-  		    <div class="contenuto">
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/TV.jpg"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/TV.jpg"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/TV.jpg"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/TV.jpg"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-            </div>
-  		</div><br/>
-  		<div class="col-lg-12 col-sm-12 col-xs-12" style="background: transparent" >
-  		    <div class="contenuto">
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/Modem.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/Modem.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/Modem.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-3 col-xs-6" style="background: transparent" >
-                    <div class="bordo" style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" src="img/Prodotti/Modem.png"></a></div>
-                    <p class="nome" style="padding-top:10px;">NOME TELEFONO</p>
-                    <p class="prezzo">prezzo telefono</p>
-                    </div>
-                </div>
-            </div>
-  		</div><br/>
   		
     </div>
 
  </div>
  
  
- <br/><br/>
+    <br/><br/></div>
  
 
  

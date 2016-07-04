@@ -1,27 +1,37 @@
 <html>
 <head>
 <title>MioBlog</title>
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script>
 			$( document ).ready(function() {
 
 				$.getJSON( "http://localhost/prova2.php?type=prova")
                 .done(function(json){
-                    var stograncazzo=json[0].idAssistenza;
-                    $("#contenuto").append(stograncazzo);
+                    
+                    var immagine=json[0].IMG_front;
+                    $("#Immagine").prepend(immagine);
+                    var Nome=json[0].Nome;
+                    $("#Nome").prepend(Nome);
+                    var Prezzo=json[0].Prezzo;
+                    $("#Prezzo").prepend(Prezzo);
                     
                     
 
                    
                           })
-                .fail(function(){alert("culo")});
+                .fail(function(){alert("errore")});
                 });
     </script>
 </head>
 <body>
 <h1>MioBlog: realizzto in PHP e MySQL</h1>
 
-<div id="contenuto"></div>
+<div id="Immagine"></div>
+<div id="Nome"></div>
+<div id="Prezzo"></div>
 
 </body>
 </html>
