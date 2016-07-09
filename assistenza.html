@@ -17,6 +17,15 @@
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
+     
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+     <script src="js/common.js"></script>
+  <script src="js/assistenza.js"></script>
+     
+     
+     
+     
  </head>
  <body>
  
@@ -90,38 +99,15 @@
 
 <div class="contenitorepercorso">
 <ol class="breadcrumb">
-  <li><a href="Index.html">Home</a></li>
-  <li>Assistenza - Tutti i servizi di Assistenza</li>
+  <li>Tutti i Servizi di Assistenza</li>
+  <li id="Percorso"></li>
 </ol>
 </div>
  
 <div class="contenitorepagina">
-<h2 style="color:#337ab7; text-align:center;"><b>Confugurare iPhone Online</b></h2>
- <div style="padding:10px;">
- <b>Descrizione</b><br/><br/>
-Nel caso si dovessero riscontrare difficoltà nell’utilizzo delle funzioni che si avvalgono della connessione dati STIM è possibile eseguire i seguenti passaggi:<br/><br/>
-1.	Spegnere/riaccendere l’iPhone/iPad.<br/>
-Se eseguendo questa operazione il problema persiste:<br/>
-    2.   Attivare/disattivare la modalità "Uso in aereo":<br/>
-•	Dalla schermata Home clicca "Impostazioni".<br/>
-•	Attiva la modalità "Uso in aereo"  per almeno un minuto, facendo scorrere il tasto da sinistra verso destra in modo da evidenziare in blu il simbolo della "linea verticale". <br/>
-•	Clicca nuovamente "Uso in aereo" per disattivare tale modalità.<br/>
-Dovrai eseguire il procedimento  inverso (tasto da destra verso sinistra).<br/>
-Si esegue questa operazione in quanto attivando la modalità "uso in aereo", il dispositivo viene scollegato in modo provvisorio dalla rete andando ad inibire tutte le sue funzioni Internet. Disattivando tale modalità il dispositivo ricercherà la rete TIM ed effettuerà il ripristino di tutte le impostazioni di rete facendo eseguire al proprio iPhone/iPad un mini reset.<br/>
-Se il problema non si risolve:<br/><br/>
-    3.   Eseguire la procedura di ripristino impostazione di connessione iniziale:<br/>
-•	Dalla schermata Home clicca "Impostazioni".<br/>
-•	Clicca "Generali". <br/>
-•	Fai scorrere il menù fino all’ultima voce e clicca "Ripristina".<br/>
-•	Clicca "Ripristina impostazioni  rete".<br/><br/>
+<h2 style="color:#337ab7; text-align:center;" id="Titolo"></h2>
+ <div style="padding:10px;" id="Descrizione">
  
-Nota Bene: Accertarsi di selezionare la voce corretta e non selezionare "Ripristina impostazioni" altrimenti il terminale verrà resettato e tutti i dati salvati al suo interno (foto,video, rubrica, applicazioni scaricate) verranno eliminati.<br/>
-•	Clicca nuovamente "Ripristina".<br/>
-In tal modo la rete del dispositivo tornerà allo stato originale. <br/>
-Avviata tale procedura il dispositivo si spegnerà e si riavvierà automaticamente.<br/>
-Attendi che l’iPhone/iPad si sia riavviato completamente e che abbia caricato tutte le sue impostazioni per poi testare nuovamente il servizio.<br/>
-È possibile che durante la procedura di riavvio, il dispositivo vi richieda un PIN. In tal caso inserite lo stesso PIN code con cui accedete di solito al vostro iPhone/iPad.<br/>
-Se il problema non si dovesse risolvere, potrebbe essere necessario aggiornare il vostro iPhone all’ultima versione rilasciata da APPLE tramite iTunes.<br/><br/>
 </div>
 <div class="row" style="border:5px solid #e8e8e8; margin-left:10px; margin-right:10px;">
         <div class="col-lg-12 col-sm-12 col-xs-12" style="background: #e8e8e8; padding:10px;">
@@ -129,16 +115,7 @@ Se il problema non si dovesse risolvere, potrebbe essere necessario aggiornare i
             <h2 style="color:#337ab7"><b>Prodotti compatibili:</b></h2>
         </div> 
         
-        <div class="col-lg-6 col-sm-6 col-xs-12" style="padding:10px;">
-                    <div style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" style="height:200px;" src="img/Prodotti/apple-iPhone6s_F1.jpg"></a></div>
-                    </div>
-                    </div>
-        <div class="col-lg-6 col-sm-6 col-xs-12" style="padding:10px;">
-                    <div style="padding-top:10px; margin:5px;">
-                    <div class="immagine"><a href=""><img class="flex zoom" style="height:200px;" src="img/Prodotti/APPLE_IPHONE_SE_F.jpg"></a></div>
-                    </div>
-        </div>
+        <div id="prodotti"></div>
         
         
         

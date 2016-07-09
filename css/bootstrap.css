@@ -7062,12 +7062,7 @@ border: 0px solid;}
 }
 
 
-.categorie:hover,
-.categorie:focus
-{
-    background-color: #FFFFFF;
-    
-}
+
 
 img.zoom:hover {
     -webkit-transform: scale(1.1,1.1);

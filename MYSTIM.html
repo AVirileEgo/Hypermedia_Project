@@ -17,6 +17,16 @@
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="js/cliente.js"> </script>
+  
+  
+  
+  
+  
  </head>
  <body>
  
@@ -97,25 +107,25 @@
                <div class="col-lg-8 col-sm-8 col-xs-8" style="background: transparent;" ><div class="titolo" ></div></div>
                 <div class="col-lg-4 col-sm-4 col-xs-12" style="background: #e8e8e8;" >
                     <div class="bordo" style="padding-top:10px; margin-right:3px; border-top:0px; text-align:left; padding-left:5px;">
-                    <div style="float:left;" ><b>Codice Cliente:</b></div><div >&nbsp 931232</div>
-                    <div style="float:left;" ><b>Nome:</b></div><div >&nbsp Angelo</div>
-                    <div style="float:left;" ><b>Cognome:</b></div><div >&nbsp Zizzari</div>
-                    <div style="float:left;" ><b>Sesso:</b></div><div >&nbsp M</div>
-                    <div style="float:left;" ><b>Data di nascita:</b></div><div >&nbsp 17/03/1992</div>
-                    <div style="float:left;" ><b>Luogo di Nascita:</b></div><div >&nbsp Galatone</div>
-                    <div style="float:left;" ><b>Telefono:</b></div><div >&nbsp Angelo</div>
-                    <div style="float:left;" ><b>Indirizzo mail:</b></div><div >&nbsp angelo.zizzari@gmail.com</div>
+                    <div  style="float:left;" ><b>Codice Cliente:</b></div><div id="codice">&nbsp </div>
+                    <div  style="float:left;" ><b>Nome:</b></div><div id="nome1">&nbsp</div>
+                    <div  style="float:left;" ><b>Cognome:</b></div><div id="Cognome">&nbsp </div>
+                    <div  style="float:left;" ><b>Sesso:</b></div><div id="Sesso" >&nbsp </div>
+                    <div style="float:left;" ><b>Data di nascita:</b></div><div id="Data" >&nbsp </div>
+                    <div  style="float:left;" ><b>Luogo di Nascita:</b></div><div id="Luogo" >&nbsp </div>
+                    <div  style="float:left;" ><b>Telefono:</b></div><div id="Telefono">&nbsp </div>
+                    <div  style="float:left;" ><b>Indirizzo mail:</b></div><div id="mail">&nbsp </div>
                         <br/>
                     <div style="float:left; font-size:18px;" ><b>Indirizzo di residenza</b></div><br/><br/>
                     
-                     <div style="float:left;" ><b>Indirizzo:</b></div><div >&nbsp angelo.zizzari@gmail.com</div>
-                      <div style="float:left;" ><b>CAP:</b></div><div >&nbsp angelo.zizzari@gmail.com</div>
-                       <div style="float:left;" ><b>Comune:</b></div><div >&nbsp angelo.zizzari@gmail.com</div>
-                        <div style="float:left;" ><b>Provincia:</b></div><div >&nbsp angelo.zizzari@gmail.com</div>
+                     <div  style="float:left;" ><b>Indirizzo:</b></div><div id="Indirizzo" >&nbsp </div>
+                      <div  style="float:left;" ><b>CAP:</b></div><div id="CAP">&nbsp</div>
+                       <div  style="float:left;" ><b>Comune:</b></div><div id="Comune" >&nbsp </div>
+                        <div  style="float:left;" ><b>Provincia:</b></div><div id="Provincia">&nbsp </div>
                     
                     </div>
                 </div>
-                <div class="col-lg-8 col-sm-8 col-xs-12" style="background: transparent" >
+                <div class="col-lg-8 col-sm-8 col-xs-12" style="background: transparent;" >
                     <div class="bordo" style="padding-top:10px; padding-left:10px; border-top:0px;">
                     <ul class="nav nav-tabs">
   <li class="active"><a data-toggle="tab" href="#home">Riepilogo</a></li>
@@ -123,62 +133,37 @@
   <li><a data-toggle="tab" href="#menu2">I miei Ordini</a></li>
 </ul>
 
-<div class="tab-content">
+<div class="tab-content" style="min-height=500px;">
   <div id="home" class="tab-pane fade in active">
-    <h3>Tariffa Base:</h3>
-    <div class="row">
-  		<div class="col-lg-12 col-sm-12 col-xs-12" style="background: transparent" >
-  		    <div class="contenuto">
-                <div class="col-lg-4 col-sm-4 col-xs-12" style="background: transparent" >
-                   <div>Chiamate Nazionali verso tutti:</div>
-                    <div class="chiamate" style="padding-top:3px; margin:5px;">
-                    <h1>10,59 €</h1>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-xs-12" style="background: transparent" >
-                   <div>Sms verso tutti:</div>
-                    <div class="sms" style="padding-top:3px; margin:5px;">
-                    <h1>10,59 €</h1>
-                    </div>
-                </div>
-                 <div class="col-lg-4 col-sm-4 col-xs-12" style="background: transparent" >
-                   <div>Internet al Mb:</div>
-                    <div class="internet" style="padding-top:3px; margin:5px;">
-                    <h1>10,59 €</h1>
-                    </div>
-                </div>
-            </div>
-        </div><br/></div>
         <h3>Offerte attive:</h3>
-        <div class="row">
-            <div class="col-lg-4 col-sm-4 col-xs-12" style="background: transparent; min-height:300px;" >
-                <img class="flex" src="img/home/stimsmartcasa.png" style="border:0px; margin:0px;">
-            </div>
-            <div class="col-lg-8 col-sm-8 col-xs-12" style="background: transparent" >
-            <div class="row" style="padding-left:10px; padding-right:10px;">
-                <div class="col-lg-6 col-sm-6 col-xs-12" style="background: trasparent" >
-                    <div style="background: #E8E8E8; height:50px; padding-top:15px;"><b>Nome Offerta</b></div>
-                    <div style="border: 2px solid #e8e8e8; height:50px; padding-top:15px;">STIM SMART CASA</div>
-                </div>
-                <div class="col-lg-6 col-sm-6 col-xs-12" style="background: trasparent" >
-                    <div style="background: #E8E8E8; height:50px; padding-top:15px;"><b>Data attivazione</b></div>
-                    <div style="border: 2px solid #e8e8e8; height:50px; padding-top:15px;">27/03/2015</div>
-                </div>
-            </div>
-            </div>
+        <div class="row" id="cicloofferte">
+           
+           
+           
+           
+           
             
         </div>
         
   </div>
-  <div id="menu1" class="tab-pane fade" style="min-height:300px;">
+  <div id="menu1" class="tab-pane fade" style="min-height:300px; min-height:400px;">
     <h3>Ultima Fattura</h3>
-    <p>
-        <embed class="flex" width="600" height="400" src="img/myarea/fattura.pdf">
+    <p id="Fattura">
+        
     </p>
   </div>
-  <div id="menu2" class="tab-pane fade">
+  <div id="menu2" class="tab-pane fade" style="min-height:400px;">
     <h3>I miei ordini</h3>
-    <p>Some content in menu 2.</p>
+    <div class="row" style="min-height=500px; padding-bot:500px;">
+        <div class="col-lg-4 col-sm-4 col-xs-4" style="background: transparent; padding-top:10px;" ><b>NUMERO ORDINE:</b></div>
+        <div class="col-lg-4 col-sm-4 col-xs-4" style="background: transparent; padding-top:10px;"><b>DATA:</b></div>
+        <div class="col-lg-4 col-sm-4 col-xs-4" style="background: transparent; padding-top:10px;"><b>VALORE:</b></div>
+        <div id="ordine">
+        
+        </div>
+       
+        
+    </div>
   </div>
 </div>
                     </div>

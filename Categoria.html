@@ -17,8 +17,37 @@
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="js/Promozione.js"></script>
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+			$( document ).ready(function() {
+
+				$.getJSON( "http://localhost/prova2.php?type=categoria&cat=1")
+                .done(function(json){
+                    
+                    for(i=0;i<json.length;i++){
+                    
+                     var div= "<div class=\"col-lg-3 col-sm-3 col-xs-6\" style=\"background: transparent\" ><div class=\"bordo\" style=\"padding-top:10px;\"><div class=\"immagine\"><a href=\"\"><img class=\"flex zoom2\" style=\"border:0px;\"src=\"img/Prodotti/"+json[i].IMG_FRONT+"\" ></a></div><p class=\"nome\" style=\"padding-top:10px;\"><b>"+json[i].Nome+"</b></p><p class=\"prezzo\">"+json[i].Prezzo+" €</p></div></div>"
+                    $("#elenco").append(div);
+                    }
+                
+                    
+                    
+                    
+                    
+                    
+  	
+                    
+
+                   
+                          })
+                .fail(function(){alert("errore")});
+                });
+    </script>
+  
+  
+  
  </head>
  <body>
  
@@ -78,36 +107,56 @@
         <li class="dropdown">
           <a href="MYSTIM.html" class="dropdown-toggle"> MySTIM </a>
         </li>       
-
       </ul>
+      
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
  
- 
- <div class="contenitore2">
+<div class="contenitore2">
     <div>
-     <div class="immagine"><img class="flex" src="img/SmartLife/smartlife.png"></div>
+     <div class="immagine"><img class="flex" src="img/Prodotti/prodotti2%20copia.png"></div>
  </div>    
 </div>
 
 <div class="contenitorepercorso">
 <ol class="breadcrumb">
-  <li><a href="Index.html">Home</a></li>
-  <li>Smart Life - Promozioni</li>
+  <li style="color:#337ab7">Prodotti - Categorie Prodotti</li>
 </ol>
 </div>
- 
+
+
+
+
+
+
+<div class="nav navbar-default"> 
+     <div class="contenitorecategorie">
+     <div class="row">
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; " type="button" ><a href="" style="text-decoration: none"><div class="categorie"><img src="img/Prodotti/Smartphone-icon.png" class="zoom"><h4 style="color: #0060a6; ">Smartphone e Telefonini</h4></div></a></div>
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; " type="button" ><a href="" style="text-decoration: none"><div class="categorie"><img  src="img/Prodotti/Tablet-icon.png" class="zoom"><h4 style="color: #0060a6; ">Tablet e PC</h4></div></a></div>
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; " type="button"><a href="" style="text-decoration: none"><div class="categorie"><img  src="img/Prodotti/Modem-icon.png" class="zoom"><h4 style="color: #0060a6; ">Modem e Networking</h4></div></a></div>
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; " type="button"><a href="" style="text-decoration: none"><div class="categorie"><img  src="img/Prodotti/TV-icon.png" class="zoom"><h4 style="color: #0060a6; ">SmartTV</h4></div></a></div>
+         </div>
+    </div>
+</div>
+
 
 <div class="contenitorepagina">
-<div class="row" id="alloff">
-  </div>
 
- </div>
- 
- 
- <br/><br/>
- 
+<div class="row">
+         <div class="col-lg-12 col-sm-12 col-xs-12" style="background: transparent" ><div class="titolo" id="Categoria">SMARTPHONE E TELEFONINI</div></div><br/>
+  		<div id="elenco">
+  		    
+  		    
+  		    
+  		    
+  		    
+  		</div>
+  		
+    </div>
+     </div>
 
  
  
