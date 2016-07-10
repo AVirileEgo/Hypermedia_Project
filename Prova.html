@@ -17,6 +17,11 @@
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
+  <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/registrazione.js"></script>
+  
+  
+ 
  </head>
  <body>
  
@@ -74,7 +79,66 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="MYSTIM.html" class="dropdown-toggle"> MySTIM </a>
+          <a href="MYSTIM.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> MySTIM </a>
+          <ul class="dropdown-menu">
+          <li role="separator" class="divider"></li>
+           <li class="registrazione">
+           <div id="form">
+    <form action="registrazione.php" method="post" id="form_ajax">
+        
+       <label for="idCliente" >idCliente:</label>
+        <input type="text" name="idCliente" id="idCliente" /><br/>
+       
+        <label for="Nome1">Nome:</label>
+        <input type="text" name="Nome1" id="Nome1"/><br/>
+        
+        <label for="Cognome">Cognome:</label>
+        <input type="text" name="Cognome" id="Cognome"/><br/>
+        
+        <label for="Sesso">Sesso:</label>
+        <select name="Sesso" id="Sesso">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select><br/>
+        
+        <label for="Nascita">Nascita (yyyy-mm-dd):</label>
+        <input type="date" name="Nascita" id="Nascita" /><br/>
+        
+        <label for="Luogo_Nascita">Luogo Nascita:</label>
+        <input type="text" name="Luogo_Nascita" id="Luogo_Nascita"/><br/>
+        
+        <label for="Telefono">Telefono:</label>
+        <input type="text" name="Telefono" id="Telefono"/><br/>
+        
+        <label for="Mail">Mail:</label>
+        <input type="text" name="Mail" id="Mail"/><br/>
+        
+        <label for="Indirizzo">Indirizzo:</label>
+        <input type="text" name="Indirizzo" id="Indirizzo"/><br/>
+        
+        <label for="CAP">CAP:</label>
+        <input type="text" name="CAP" id="CAP"/><br/>
+        
+        <label for="Comune">Comune:</label>
+        <input type="text" name="Comune" id="Comune"/><br/>
+        
+        <label for="Provincia">Provincia:</label>
+        <input type="text" name="Provincia" id="Provincia"/><br/>
+        
+        <label for="Password">Password:</label>
+        <input type="password" name="Password" id="Password"/><br/>
+        
+        <label for="Fattura">Fatture:</label>
+        <input type="text" name="Fattura" id="Fattura"/><br/>
+        
+        <input type="submit" value="invia" id="submit"/>
+        
+    </form>
+</div>
+
+         </li>
+           <li role="separator" class="divider"></li>
+          </ul>
         </li>   
 
       </ul>
@@ -120,12 +184,67 @@
 
 <div class="contenitorepagina">
 
+<div id="form">
+    <form action="registrazione.php" method="post" id="form_ajax">
+       
+       <label for="idCliente">idCliente:</label>
+        <input type="text" name="idCliente" id="idCliente"/>
+       
+        <label for="Nome1">Nome:</label>
+        <input type="text" name="Nome1" id="Nome1"/>
+        
+        <label for="Cognome">Cognome:</label>
+        <input type="text" name="Cognome" id="Cognome"/>
+        
+        <label for="Sesso">Sesso:</label>
+        <select name="Sesso" id="Sesso">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+        
+        <label for="Nascita">Nascita (yyyy-mm-dd):</label>
+        <input type="date" name="Nascita" id="Nascita"/>
+        
+        <label for="Luogo_Nascita">Luogo Nascita:</label>
+        <input type="text" name="Luogo_Nascita" id="Luogo_Nascita"/>
+        
+        <label for="Telefono">Telefono:</label>
+        <input type="text" name="Telefono" id="Telefono"/>
+        
+        <label for="Mail">Mail:</label>
+        <input type="text" name="Mail" id="Mail"/>
+        
+        <label for="Indirizzo">Indirizzo:</label>
+        <input type="text" name="Indirizzo" id="Indirizzo"/>
+        
+        <label for="CAP">CAP:</label>
+        <input type="text" name="CAP" id="CAP"/>
+        
+        <label for="Comune">Comune:</label>
+        <input type="text" name="Comune" id="Comune"/>
+        
+        <label for="Provincia">Provincia:</label>
+        <input type="text" name="Provincia" id="Provincia"/>
+        
+        <label for="Password">Password:</label>
+        <input type="password" name="Password" id="Password"/>
+        
+        <label for="Fattura">Fatture:</label>
+        <input type="text" name="Fattura" id="Fattura"/>
+        
+        <input type="submit" value="invia" id="submit"/>
+        
+    </form>
+</div>
+
+
+
 
 <div class="row">
-  		<div class="col-lg-3 col-sm-6 col-xs-12" style="background: transparent; margin-bottom:20px;" ><a href="/SmartLife.html?type=offerta&offerta=3"><img class="zoom2" src="img/SmartLife/stimsmartcasa.png"></a></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-12" style="background: transparent; margin-bottom:20px" ><a href="/SmartLife.html?type=offerta&offerta=9"><img class="zoom2" src="img/SmartLife/start.png"></a></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-12" style="background: transparent; margin-bottom:20px" ><a href="/SmartLife.html?type=offerta&offerta=7"><img class="zoom2" src="img/SmartLife/stimyoung.png"></a></div>
-  		<div class="col-lg-3 col-sm-6 col-xs-12" style="background: transparent; margin-bottom:20px" ><a href="/SmartLife.html?type=offerta&offerta=10"><img class="zoom2" src="img/SmartLife/vision.png"></a></div>
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><a href="/SmartLife.html?type=offerta&offerta=3"><img class="zoom2" src="img/SmartLife/stimsmartcasa.png"></a></div>
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><a href="/SmartLife.html?type=offerta&offerta=9"><img class="zoom2" src="img/SmartLife/start.png"></a></div>
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><a href="/SmartLife.html?type=offerta&offerta=7"><img class="zoom2" src="img/SmartLife/stimyoung.png"></a></div>
+  		<div class="col-lg-3 col-sm-6 col-xs-6" style="background: transparent; margin-bottom:20px" ><a href="/SmartLife.html?type=offerta&offerta=10"><img class="zoom2" src="img/SmartLife/vision.png"></a></div>
   </div>
  </div>
  

@@ -7101,32 +7101,23 @@ img.zoom2 {
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
 }
-.chiamate{
-    border-radius: 7px;
-    height: 80px;
-    background: -webkit-linear-gradient(#00e100, #00ff00,#00e100); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#00e100, #00ff00,#00e100); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#00e100, #00ff00,#00e100); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#00e100, #00ff00,#00e100); /* Standard syntax */
+
+.registrazione{
+    display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
 }
 
-.sms{
-    border-radius: 7px;
-    height: 80px;
-    background: -webkit-linear-gradient(#0080c0, #00a0e0,#0080c0); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#0080c0, #00a0e0,#0080c0); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#0080c0, #00a0e0,#0080c0); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#0080c0, #00a0e0,#0080c0); /* Standard syntax */
-}
 
-.internet{
-    border-radius: 7px;
-    height: 80px;
-    background: -webkit-linear-gradient(#e01f25, #ff1f35,#e01f25); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#e01f25, #ff1f35,#e01f25); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#e01f25, #ff1f35,#e01f25); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#e01f25, #ff1f35,#e01f25); /* Standard syntax */
-}
+
+
+
+
+
 
 
 
