@@ -2,7 +2,7 @@
     
 #cerca i prodotti nel carrello
 	if ($_GET["type"]=="carrello" && $_GET["cliente"]==1){
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
+		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);

@@ -25,8 +25,12 @@ $(function()
                             success: function(res) {
                                 $('risposta').remove();
                                 $('#form').append('<p id="risposta">'+res+'</p>');
+                                window.location.href='http:MYSTIM.html?type=codice&id='+idCliente;
+                                
                                 $('#loading').fadeOut(800,function(){
                                     $(this).remove();
+                                    
+                                    
                                 })
                                 
                             }

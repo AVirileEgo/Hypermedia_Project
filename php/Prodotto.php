@@ -2,7 +2,7 @@
 #cerca specifico telefono
 	if ($_GET["type"]=="smartphone")
     {
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
+		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);} 

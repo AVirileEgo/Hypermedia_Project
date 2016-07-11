@@ -1,7 +1,6 @@
 <?php
-# cerca prodotti in outlet
-	
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
+#Registrati nel DB	
+		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
@@ -81,6 +80,7 @@
     if ($st)
     {
     	echo "registrazione avvenuta";
+        
     }
     else
     {

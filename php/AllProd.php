@@ -1,7 +1,7 @@
 <?php
  # cerca tutti i prodotti ordinandoli per categoria
 	if ($_GET["type"]=="allprod"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
+		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);

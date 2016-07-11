@@ -1,9 +1,9 @@
 <?php
     
 #cerca specifico cliente
-	if ($_GET["type"]=="cliente" && $_GET["id"]==2)
+	if ($_GET["type"]=="cliente")
     {
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
+		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);} 

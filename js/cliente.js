@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-				$.getJSON( "php/Cliente.php?type=cliente&id=2")
+				$.getJSON( "php/Cliente.php?type=cliente&id="+QueryString.id)
                 .done(function(json){
                     
 
@@ -102,8 +102,8 @@ $( document ).ready(function() {
                         }
                     else 
                     {
-                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-4\" style=\" padding:10px;\"><h4 style=\"color:grey;\"><b>NON HAI OFFERTE ATTIVE<br/><br/>Scegli quella piu adatta a te nella pagina delle offerte</b></h4></div>"
-                    $("#cicloofferte").append(div)
+                        var div="<div class=\"col-lg-12 col-sm-12 col-xs-12\" style=\" padding:10px;\"><h4 style=\"color:grey;\"><b>NON HAI EFFETTUATO NESSUN ORDINE<br/><br/>Cerca il prodotto piu adatto a te nella pagina Prodotti</b></h4></div>"
+                    $("#ordine").append(div)
                     }
                     
                    

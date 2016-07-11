@@ -1,6 +1,6 @@
 <?php
- #cerca tutte le offerte ordinandole per categoria
-	if ($_GET["type"]=="alloff"){
+# cerca prodotti in outlet
+	if ($_GET["type"]=="home"){
 		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
@@ -8,7 +8,7 @@
 		} 
      
     else {
-		$sql = "SELECT idOfferta,imgSL,Categoria FROM Offerta ORDER BY Categoria";
+		$sql = "SELECT * FROM Cliente ORDER BY idCliente DESC";
 		$result = $conn->query($sql);
         
 
@@ -25,5 +25,6 @@
         $result->close();
 		$conn->close();
 	}}
+
 
 ?>

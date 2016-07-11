@@ -1,7 +1,7 @@
 <?php
 # cerca prodotti in outlet
 	if ($_GET["type"]=="outlet"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
+		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);

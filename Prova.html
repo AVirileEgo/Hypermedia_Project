@@ -13,13 +13,14 @@
   <link rel="stylesheet" href="mystyle.css" type="text/css" />
   <!-- Modernizr -->
   <script src="js/modernizr.custom.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.2.js"></script>
   <!-- respond.js per IE8 -->
   <!--[if lt IE 9]>
   <script src="js/respond.min.js"></script>
   <![endif]-->
   <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/registrazione.js"></script>
-  
+  <script src="js/Home.js"></script>
   
  
  </head>
@@ -79,65 +80,134 @@
           </ul>
         </li>
         <li class="dropdown">
-          <a href="MYSTIM.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> MySTIM </a>
-          <ul class="dropdown-menu">
-          <li role="separator" class="divider"></li>
-           <li class="registrazione">
-           <div id="form">
+         
+          <a href="MYSTIM.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" auto-close="disabled"> MySTIM </a>
+          <ul class="dropdown-menu" style="min-width:300px;">
+          <form>
+           <li>
+              <div style="padding:5px;">
+                  <ul class="nav nav-tabs">
+                  
+                  <li class="active"><a data-toggle="tab" href="#home" style="font-size:18px;"><b>Registrazione</b></a></li>
+                  
+                  <li><a data-toggle="tab" href="#menu1" style="font-size:18px;"><b>Login</b></a></li>
+        </ul>
+              
+ <div class="tab-content">
+ <div id="home" class="tab-pane fade in active">
+                          
+                          
+                          
+                          
+    <div id="form">
     <form action="registrazione.php" method="post" id="form_ajax">
-        
-       <label for="idCliente" >idCliente:</label>
-        <input type="text" name="idCliente" id="idCliente" /><br/>
+        <div class="input-group" style="margin:5px;" id="codice"></div>
        
-        <label for="Nome1">Nome:</label>
-        <input type="text" name="Nome1" id="Nome1"/><br/>
+       <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Nome:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Nome1" id="Nome1">
+        </div>
         
-        <label for="Cognome">Cognome:</label>
-        <input type="text" name="Cognome" id="Cognome"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Cognome:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Cognome" id="Cognome">
+        </div>
         
-        <label for="Sesso">Sesso:</label>
-        <select name="Sesso" id="Sesso">
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Sesso:</span>
+          <select name="Sesso" id="Sesso" class="form-control" style="border-raius-top-left:0px;">
             <option value="M">M</option>
             <option value="F">F</option>
-        </select><br/>
+        </select>
+        </div>
         
-        <label for="Nascita">Nascita (yyyy-mm-dd):</label>
-        <input type="date" name="Nascita" id="Nascita" /><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Data Nascita:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Nascita" id="Nascita" placeholder="yyyy-mm-dd">
+        </div>
         
-        <label for="Luogo_Nascita">Luogo Nascita:</label>
-        <input type="text" name="Luogo_Nascita" id="Luogo_Nascita"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Luogo Nascita:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Luogo_Nascita" id="Luogo_Nascita">
+        </div>
         
-        <label for="Telefono">Telefono:</label>
-        <input type="text" name="Telefono" id="Telefono"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Telefono:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Telefono" id="Telefono">
+        </div>
         
-        <label for="Mail">Mail:</label>
-        <input type="text" name="Mail" id="Mail"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Mail:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Mail" id="Mail">
+        </div>
         
-        <label for="Indirizzo">Indirizzo:</label>
-        <input type="text" name="Indirizzo" id="Indirizzo"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Indirizzo:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Indirizzo" id="Indirizzo">
+        </div>
         
-        <label for="CAP">CAP:</label>
-        <input type="text" name="CAP" id="CAP"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">CAP:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="CAP" id="CAP">
+        </div>
         
-        <label for="Comune">Comune:</label>
-        <input type="text" name="Comune" id="Comune"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Comune:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Comune" id="Comune">
+        </div>
         
-        <label for="Provincia">Provincia:</label>
-        <input type="text" name="Provincia" id="Provincia"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Provincia:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Provincia" id="Provincia">
+        </div>
         
-        <label for="Password">Password:</label>
-        <input type="password" name="Password" id="Password"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Password:</span>
+          <input type="Password" class="form-control" aria-describedby="basic-addon1" name="Password" id="Password">
+        </div>
         
-        <label for="Fattura">Fatture:</label>
-        <input type="text" name="Fattura" id="Fattura"/><br/>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Fattura:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Fattura" id="Fattura">
+        </div>
         
-        <input type="submit" value="invia" id="submit"/>
+      
+      
         
+        <br/>
+        <button type="submit" class="btn btn-default btn-primary" value="invia" id="submit">Registrati</button>
     </form>
 </div>
+                         
+                              
+                          </div>
+                          
+<div id="menu1" class="tab-pane fade">
+    <form action="MYSTIM.html?type=codice&id=2" method="post" id="form_ajax1">
+       <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Telefono:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Telefono" id="Telefono">
+        </div>
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Password:</span>
+          <input type="Password" class="form-control" aria-describedby="basic-addon1" name="Password" id="Password">
+        </div>
+        <button class="btn btn-default btn-primary" value="invia" id="submit">Accedi</button>
+        
+        
+        
+        
+    </form>
 
-         </li>
-           <li role="separator" class="divider"></li>
+                          </div>
+  
+                </div>
+               
+               </div>
+           </li>
+          
+           
+           </form>
           </ul>
         </li>   
 
@@ -183,61 +253,6 @@
      <br/><br/>
 
 <div class="contenitorepagina">
-
-<div id="form">
-    <form action="registrazione.php" method="post" id="form_ajax">
-       
-       <label for="idCliente">idCliente:</label>
-        <input type="text" name="idCliente" id="idCliente"/>
-       
-        <label for="Nome1">Nome:</label>
-        <input type="text" name="Nome1" id="Nome1"/>
-        
-        <label for="Cognome">Cognome:</label>
-        <input type="text" name="Cognome" id="Cognome"/>
-        
-        <label for="Sesso">Sesso:</label>
-        <select name="Sesso" id="Sesso">
-            <option value="M">M</option>
-            <option value="F">F</option>
-        </select>
-        
-        <label for="Nascita">Nascita (yyyy-mm-dd):</label>
-        <input type="date" name="Nascita" id="Nascita"/>
-        
-        <label for="Luogo_Nascita">Luogo Nascita:</label>
-        <input type="text" name="Luogo_Nascita" id="Luogo_Nascita"/>
-        
-        <label for="Telefono">Telefono:</label>
-        <input type="text" name="Telefono" id="Telefono"/>
-        
-        <label for="Mail">Mail:</label>
-        <input type="text" name="Mail" id="Mail"/>
-        
-        <label for="Indirizzo">Indirizzo:</label>
-        <input type="text" name="Indirizzo" id="Indirizzo"/>
-        
-        <label for="CAP">CAP:</label>
-        <input type="text" name="CAP" id="CAP"/>
-        
-        <label for="Comune">Comune:</label>
-        <input type="text" name="Comune" id="Comune"/>
-        
-        <label for="Provincia">Provincia:</label>
-        <input type="text" name="Provincia" id="Provincia"/>
-        
-        <label for="Password">Password:</label>
-        <input type="password" name="Password" id="Password"/>
-        
-        <label for="Fattura">Fatture:</label>
-        <input type="text" name="Fattura" id="Fattura"/>
-        
-        <input type="submit" value="invia" id="submit"/>
-        
-    </form>
-</div>
-
-
 
 
 <div class="row">
