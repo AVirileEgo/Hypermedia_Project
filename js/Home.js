@@ -9,5 +9,5 @@ $( document ).ready(function() {
                 
                    
                           })
-                .fail(function(){alert("errore")});
+                .fail(function(){alert("errore in home.js")});
                 });

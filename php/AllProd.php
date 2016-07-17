@@ -1,14 +1,14 @@
 <?php
  # cerca tutti i prodotti ordinandoli per categoria
 	if ($_GET["type"]=="allprod"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 
      
     else {
-		$sql = "SELECT idProdotto,IMG_FRONT,Nome,Prezzo,Categoria FROM Prodotto ORDER BY Categoria";
+		$sql = "SELECT idProdotto,IMG_FRONT,Nome,Prezzo,Categoria FROM prodotto ORDER BY Categoria";
 		$result = $conn->query($sql);
         
 

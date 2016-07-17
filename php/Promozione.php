@@ -1,8 +1,8 @@
 <?php
     # cerca offerte in promozione
 	if ($_GET["type"]=="promozione"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 

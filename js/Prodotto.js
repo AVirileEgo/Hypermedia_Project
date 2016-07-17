@@ -22,8 +22,8 @@ $( document ).ready(function() {
                     $("#titolopag").prepend(titolopag);
 
                     
-                    if(json[0].imgSL!=undefined){
-                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[0].imgSL+"\"></div>"
+                    if(json[0].Offerta_idOfferta!=undefined){
+                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><a href=\"/SMARTLIFE.html?type=offerta&offerta="+json[0].Offerta_idOfferta+"\" ><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[0].imgSL+"\"></a></div>"
                         $("#cicloofferte").append(div);
                         appoggio= new Array();
                         appoggio.push(json[0].imgSL);
@@ -41,7 +41,7 @@ $( document ).ready(function() {
                                 }
                             }
                             if (verifica!=0){
-                                var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[y].imgSL+"\"></div>"
+                                var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><a href=\"/SMARTLIFE.html?type=offerta&offerta="+json[y].Offerta_idOfferta+"\" ><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[y].imgSL+"\"></a></div>"
                                 $("#cicloofferte").append(div);
                                 appoggio.push(json[y].imgSL);
                             }
@@ -78,7 +78,7 @@ $( document ).ready(function() {
                         appoggio1.push(json[0].Titolo);
                         
                         
-                        if(json[1].Titolo!=undefined){
+                        if(json.length>0){
                         for(i=1;i<json.length;i++)
                         {
                             verifica=1;

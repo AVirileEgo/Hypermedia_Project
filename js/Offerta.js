@@ -18,7 +18,7 @@ $( document ).ready(function() {
                     
                     
                    if(json[0].IMG_front!=undefined){
-                    var  prodotti="<div class=\"col-lg-6 col-sm-6 col-xs-12\" style=\"padding:10px;\"><div style=\"padding-top:10px; margin:5px;\"><div class=\"immagine\"><a href=\"\"><img class=\"flex zoom\"style=\"height:300px;\" src=\"img/Prodotti/"+json[0].IMG_front+"\"></a></div></div></div>"
+                    var  prodotti="<div class=\"col-lg-6 col-sm-6 col-xs-12\" style=\"padding:10px;\"><div style=\"padding-top:10px; margin:5px;\"><div class=\"immagine\"><a href=\"/PRODOTTO.html?type=smartphone&prodotto="+json[0].Prodotto_idProdotto+"\"><img class=\"flex zoom\"style=\"height:300px;\" src=\"img/Prodotti/"+json[0].IMG_front+"\"></a></div></div></div>"
                     $("#prodotti").append(prodotti);
                     appoggio= new Array();
                     appoggio.push(json[0].IMG_front);
@@ -36,7 +36,7 @@ $( document ).ready(function() {
                                 }
                             }
                             if (verifica!=0){
-                            var  prodotti="<div class=\"col-lg-6 col-sm-6 col-xs-12\" style=\"padding:10px;\"><div style=\"padding-top:10px; margin:5px;\"><div class=\"immagine\"><a href=\"\"><img class=\"flex zoom\"style=\"height:300px;\" src=\"img/Prodotti/"+json[y].IMG_front+"\"></a></div></div></div>"
+                            var  prodotti="<div class=\"col-lg-6 col-sm-6 col-xs-12\" style=\"padding:10px;\"><div style=\"padding-top:10px; margin:5px;\"><div class=\"immagine\"><a href=\"/PRODOTTO.html?type=smartphone&prodotto="+json[y].Prodotto_idProdotto+"\"><img class=\"flex zoom\"style=\"height:300px;\" src=\"img/Prodotti/"+json[y].IMG_front+"\"></a></div></div></div>"
                             $("#prodotti").append(prodotti);
                                 appoggio.push(json[y].IMG_front);
                             }

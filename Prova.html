@@ -21,7 +21,7 @@
   <script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/registrazione.js"></script>
   <script src="js/Home.js"></script>
-  
+  <script src="js/login.js"></script>
  
  </head>
  <body>
@@ -45,7 +45,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="http://rivatardinizizzari.altervista.org"><img src="img/home/LOGO.jpg" class="img-responsive"></a>
+      <a class="navbar-brand" href="http://rivatardinizizzari.altervista.org/index.html"><img src="img/home/LOGO.jpg" class="img-responsive"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -183,22 +183,37 @@
                           </div>
                           
 <div id="menu1" class="tab-pane fade">
-    <form action="php/login.php" method="post" id="form_ajax1">
+    <!--<form action="" method="post" id="form_ajax1">
        <div class="input-group" style="margin:5px;">
           <span class="input-group-addon" id="basic-addon1">Telefono:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Telefono" id="Telefono">
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Telefono" id="Telefono1">
         </div>
         <div class="input-group" style="margin:5px;">
           <span class="input-group-addon" id="basic-addon1">Password:</span>
-          <input type="Password" class="form-control" aria-describedby="basic-addon1" name="Password" id="Password">
+          <input type="Password" class="form-control" aria-describedby="basic-addon1" name="Password" id="Password1">
         </div>
-        <button class="btn btn-default btn-primary" value="invia" id="submit">Accedi</button>
-        
-        
-        
-        
-    </form>
+        <button class="btn btn-default btn-primary" value="invia" id="login" onclick="myFunction()">Accedi</button>
 
+        
+    </form>-->
+     <form action="php/process.php" method="post" id="login">
+	<ul>
+        <li class="input-group" style="margin:5px;">
+			<label class="input-group-addon" id="basic-addon1" for="Telefono1">Telefono</label>
+			<input class="form-control" aria-describedby="basic-addon1" type="text" name="Telefono" id="Telefono1" />
+		</li>
+		<li class="input-group" style="margin:5px;">
+			<label class="input-group-addon" id="basic-addon2" for="Password1">Password</label>
+			<input class="form-control" aria-describedby="basic-addon2" type="password" name="Password" id="Password1" />
+		</li>
+	</ul>
+	<p><button type="submit" class="btn btn-default btn-primary" id="submit">Accedi</button></p>
+	
+</form>
+                         
+                         
+                         
+                         
                           </div>
   
                 </div>

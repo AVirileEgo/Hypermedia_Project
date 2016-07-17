@@ -3,8 +3,8 @@
 #cerca specifico cliente
 	if ($_GET["type"]=="cliente")
     {
-		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);} 
      
@@ -48,7 +48,7 @@
     					else
     					{
     						//Solo Cliente
-            				$sql = "SELECT * FROM Cliente WHERE idCliente=".$_GET["id"];
+            				$sql = "SELECT * FROM cliente WHERE idCliente=".$_GET["id"];
            					$result = $conn->query($sql);
             				if ($result->num_rows > 0) {
             				$categories= array();

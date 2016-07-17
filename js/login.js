@@ -1,29 +1,35 @@
-$(function()
-     {
-         $('#submit').click(function(){
-             
-            
-             var Telefono=$('#Telefono').val();
-             var Password=$('#Password').val();
-             
-         $.ajax({
-                            url:'php/login.php',
-                            type:'POST',
-                            data: 'Telefono='+Telefono+'&Password='+Password,
-                            success: function(res) {
-                                $('#form').append('<p id="risultato">'+res+'</p>');
-                                window.location.href='http:MYSTIM.html?type=codice&id='+idCliente;
-                                
-                                    
-                                    
-                                })
-                                
-                            }
-                            })
-         
-         
-         
-         
-         return false;
-         });
-     });
+
+$(function() {
+
+	$('#login').submit(function(event) {
+	
+		var $form = $(this);
+		var url = $form.attr('action');
+		var email = $('#Telefono1', $form).val();
+		var pwd = $('#Password1', $form).val();
+		var data = 'Telefono1=' + email + '&Password1=' + pwd;
+		
+		$.ajax({
+			type: 'POST',
+			dataType: 'html',
+			url: url,
+			data: data,
+			success: function(html) {
+			
+				$('div.message', $form).remove();
+			
+				$(html).prependTo($('ul', $form));
+			if($(html)!='Password errata')
+                {
+                    window.location.href='www.google.com';
+                }
+			}
+			
+		});
+		
+	
+		event.preventDefault();
+	
+	});
+
+});

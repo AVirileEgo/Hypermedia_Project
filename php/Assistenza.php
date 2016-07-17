@@ -3,14 +3,14 @@
 #cerca specifica asssitenza
 	if ($_GET["type"]=="assistenza")
     {
-		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);} 
      
     else { 
     	//Offerte con prodotti
-    	$sql = "SELECT idAssistenza,Titolo,assistenza.Descrizione,IMG_front FROM Prodotto,assistenza_has_prodotto,assistenza WHERE idAssistenza=Assistenza_idAssistenza AND idProdotto=Prodotto_idProdotto AND idAssistenza=".$_GET["codice"];
+    	$sql = "SELECT idAssistenza,Titolo,assistenza.Descrizione,IMG_front FROM prodotto,assistenza_has_prodotto,assistenza WHERE idAssistenza=Assistenza_idAssistenza AND idProdotto=Prodotto_idProdotto AND idAssistenza=".$_GET["codice"];
         $result = $conn->query($sql);
     	if ($result->num_rows > 0) 
     		{
@@ -23,7 +23,7 @@
     	else
     		{
             //Per le offerte senza prodotti
-            $sql = "SELECT idAssistenza,Titolo, assistenza.Descrizione FROM Assistenza WHERE idAssistenza=".$_GET["codice"];
+            $sql = "SELECT idAssistenza,Titolo, assistenza.Descrizione FROM assistenza WHERE idAssistenza=".$_GET["codice"];
             $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                     $categories= array();

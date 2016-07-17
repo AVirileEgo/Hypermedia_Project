@@ -1,8 +1,8 @@
 <?php
 #login
 	
-		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 
@@ -16,7 +16,7 @@
             }  
  
 
-    $sql="SELECT * FROM Cliente WHERE Telefono='".$Telefono."' AND Password='".$Password."'";
+    $sql="SELECT * FROM cliente WHERE Telefono='".$Telefono."' AND Password='".$Password."'";
 				$result = $conn->query($sql);
             if ($result->num_rows > 0) {
                     $categories= array();

@@ -1,14 +1,14 @@
 <?php
 # cerca prodotti in outlet
 	if ($_GET["type"]=="home"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'my_rivatardinizizzari');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 
      
     else {
-		$sql = "SELECT * FROM Cliente ORDER BY idCliente DESC";
+		$sql = "SELECT * FROM cliente ORDER BY idCliente DESC";
 		$result = $conn->query($sql);
         
 
