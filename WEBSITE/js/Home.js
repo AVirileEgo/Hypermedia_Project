@@ -32,5 +32,5 @@ $( document ).ready(function() {
                 
                    
                           })
-                .fail(function(){alert("errore in home.js")});
+                
                 });
