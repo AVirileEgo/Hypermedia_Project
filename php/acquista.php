@@ -7,7 +7,7 @@ $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
 		} 
 $data = date ("Y-m-j");
     $sql = "INSERT INTO ordine (Cliente_idCliente, Data,Totale)
-VALUES (".$_COOKIE["login"].",'$data','12321')";
+VALUES (".$_COOKIE["login"].",'$data','121')";
     if (mysqli_query($conn, $sql))
     {
     	echo "inserimento avvenuta";
