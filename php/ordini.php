@@ -7,7 +7,7 @@ $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
 			die("Connection failed: " . $conn->connect_error);} 
 			
 			else {
-		$sql = "SELECT * FROM ordine WHERE Cliente_idCliente=2";
+		$sql = "SELECT * FROM ordine WHERE Cliente_idCliente=".$_GET["id"];;
 		$result = $conn->query($sql);
         
 
