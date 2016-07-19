@@ -6,6 +6,8 @@ $( document ).ready(function() {
 
                     var Nome=json[0].nome;
                     $("#Nome").prepend(Nome);
+                    var Percorso=json[0].nome;
+                    $("#Percorso").prepend(Percorso);
                     var Regole=json[0].Attivazione_Regole;
                     $("#Regole").prepend(Regole);
                     var FAQ=json[0].FAQ;

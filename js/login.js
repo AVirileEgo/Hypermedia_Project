@@ -7,7 +7,8 @@ $(function() {
 		var url = $form.attr('action');
 		var email = $('#Telefono1', $form).val();
 		var pwd = $('#Password1', $form).val();
-		var data = 'Telefono1=' + email + '&Password1=' + pwd;
+        var idCliente = $('#idCliente1', $form).val();
+		var data ='idCliente1=' + idCliente + '&Telefono1=' + email + '&Password1=' + pwd;
 		
 		$.ajax({
 			type: 'POST',
@@ -15,14 +16,11 @@ $(function() {
 			url: url,
 			data: data,
 			success: function(html) {
-			
-				$('div.message', $form).remove();
+                $('div.message', $form).remove();
 			
 				$(html).prependTo($('ul', $form));
-			if($(html)!='Password errata')
-                {
-                    window.location.href='www.google.com';
-                }
+			if(html=='<div class="success message">Login effettuato con successo</div>'){
+				 window.location.href='http:MYSTIM.html?type=codice&id='+idCliente;}
 			}
 			
 		});

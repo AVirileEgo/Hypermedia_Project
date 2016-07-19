@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+        
 
 				$.getJSON( "php/Prodotto.php?type=smartphone&prodotto="+QueryString.prodotto)
                 .done(function(json){
@@ -72,7 +73,7 @@ $( document ).ready(function() {
                     
                     
                     if(json[0].Titolo!=undefined){
-                        var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"assistenza.html\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[0].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
+                        var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice="+json[0].Assistenza_idAssistenza+"\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[0].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
                         $("#cicloassistenza").append(div1);
                         appoggio1= new Array();
                         appoggio1.push(json[0].Titolo);
@@ -90,7 +91,7 @@ $( document ).ready(function() {
                                 }
                             }
                             if (verifica!=0){
-                                var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"assistenza.html\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[y].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
+                                var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice="+json[y].Assistenza_idAssistenza+"\"  style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[y].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
                                 $("#cicloassistenza").append(div1);
                                 appoggio1.push(json[y].Titolo);
                             }

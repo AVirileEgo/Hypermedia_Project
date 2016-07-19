@@ -10,6 +10,8 @@ $( document ).ready(function() {
                     $("#Descrizione").prepend(Descrizione);
                     var Percorso=json[0].Titolo;
                     $("#Percorso").prepend(Percorso);
+                    var titolopag="Assistenze | "+json[0].Titolo;
+                    $("#titolopag").prepend(titolopag);
 
                     
                     
@@ -43,7 +45,7 @@ $( document ).ready(function() {
                         }
                     else 
                     {
-                        var prodotti="<div class=\"col-lg-12 col-sm-12 col-xs-12\" style=\" padding:10px;\"><h4 style=\"color:grey;\"><b>CI DISPIACE!!<br/><br/>Al momento esistono prodotti abbinabili a questa assistenza</b></h4></div>"
+                        var prodotti="<div class=\"col-lg-12 col-sm-12 col-xs-12\" style=\" padding:10px;\"><h4 style=\"color:grey;\"><b>CI DISPIACE!!<br/><br/>Al momento non esistono prodotti abbinabili a questa assistenza</b></h4></div>"
                     $("#prodotti").append(prodotti)
                     }
                     

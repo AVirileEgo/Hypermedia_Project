@@ -2561,7 +2561,6 @@ output {
 .form-control {
   display: block;
   width: 100%;
-    max-width: 150px;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -4107,20 +4106,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     line-height: 8px;
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: bold;
-    background: -webkit-linear-gradient(#001299, #001260); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#001299, #001260); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#001299, #001260); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#001299, #001260); /* Standard syntax */  
+    background: -webkit-linear-gradient(#0060a6, #0060a6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0060a6, #0060a6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0060a6, #0060a6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0060a6, #0060a6); /* Standard syntax */  
 }
 
 
 
 
 .nav-pills {
-    background: -webkit-linear-gradient(#001299, #001260); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#001299, #001260); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#001299, #001260); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#001299, #001260); /* Standard syntax */
+    background: -webkit-linear-gradient(#0060a6, #0060a6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0060a6, #0060a6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0060a6, #0060a6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0060a6, #0060a6); /* Standard syntax */
     margin-right: auto;
     margin-left: auto;
 }
@@ -4136,10 +4135,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 
 .nav-pills > li > a:hover{
   color: white;
-    background: -webkit-linear-gradient(#0018D1, #001FAB); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#0018D1, #001FAB); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#0018D1, #001FAB); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#0018D1, #001FAB); /* Standard syntax */}
+    background: -webkit-linear-gradient(#0060a6, #0060a6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0060a6, #0060a6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0060a6, #0060a6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0060a6, #0060a6); /* Standard syntax */}
 
 
 
@@ -5531,10 +5530,10 @@ button.list-group-item-danger.active:focus {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
-    background: -webkit-linear-gradient(#001299, #001260); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#001299, #001260); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#001299, #001260); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#001299, #001260); /* Standard syntax */
+    background: -webkit-linear-gradient(#0060a6, #0060a6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0060a6, #0060a6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0060a6, #0060a6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0060a6, #0060a6); /* Standard syntax */
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -6427,7 +6426,7 @@ button.close {
   z-index: 5;
   display: inline-block;
   margin-top: -10px;
-    color: #001299;
+    color: #0060a6;
 }
 .carousel-control .icon-prev,
 .carousel-control .glyphicon-chevron-left {
@@ -6471,10 +6470,10 @@ button.close {
   text-indent: -999px;
   cursor: pointer;
   background-color: #000 \9;
-   background: -webkit-linear-gradient(#001299, #001260); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#001299, #001260); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#001299, #001260); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#001299, #001260); /* Standard syntax */
+   background: -webkit-linear-gradient(#0060a6, #0060a6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0060a6, #0060a6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0060a6, #0060a6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0060a6, #0060a6); /* Standard syntax */
   border-radius: 10px;
 }
 .carousel-indicators .active {
@@ -6827,22 +6826,21 @@ button.close {
   }
 }
 
-
 .contenitore {
-    background: -webkit-linear-gradient(#001299, #001260); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#001299, #001260); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#001299, #001260); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#001299, #001260); /* Standard syntax */
+    background: -webkit-linear-gradient(#0060a6, #0060a6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0060a6, #0060a6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0060a6, #0060a6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0060a6, #0060a6); /* Standard syntax */
     margin-right: auto;
     margin-left: auto;
     height: 25px;
     width: 100%;
 }
 .contenitore2 {
-    background: -webkit-linear-gradient(#001299, #001260); /* For Safari 5.1 to 6.0 */
-	background: -o-linear-gradient(#001299, #001260); /* For Opera 11.1 to 12.0 */
-	background: -moz-linear-gradient(#001299, #001260); /* For Firefox 3.6 to 15 */
-	background: linear-gradient(#001299, #001260); /* Standard syntax */
+    background: -webkit-linear-gradient(#0060a6, #0060a6); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#0060a6, #0060a6); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#0060a6, #0060a6); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#0060a6, #0060a6); /* Standard syntax */
     margin-top: -20px;
     margin-right: auto;
     margin-left: auto;
@@ -6858,7 +6856,7 @@ button.close {
   padding-top: 0px;
   padding-bottom: 0px;
     font-size:30px;
-  color: #001299;
+  color: #0060a6;
   text-align:justify;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
@@ -7082,7 +7080,7 @@ img.zoom {
 
 img.zoom2:hover {
     border:5px solid;
-    border-color: #001299;
+    border-color: #0060a6;
     -webkit-transform: scale(1.1,1.1);
     -moz-transform: scale(1.1,1.1);
     -o-transform: scale(1.1,1.1);
@@ -7112,50 +7110,99 @@ img.zoom2 {
   white-space: nowrap;
 }
 
-@import url('http://weloveiconfonts.com/api/?family=entypo');
-.wrapper {
-  padding: 120px 0 0;
-  text-align: center;
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
 }
 
-.social {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
-  line-height: 50px;
-  font-family: Entypo;
-  font-size: 28px;
-  text-align: center;
-  color: #555;
-  border-radius: 10px;
-  background: #eee;
-  overflow: hidden;
-  cursor: pointer;
+
+/* footer social icons */
+.social-network a.icoYouTube:hover {
+	background-color: #BB0000;
+}
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+	background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+	background-color:#0590B8;
+}
+.social-network a.icoLinkedin:hover {
+	background-color:#007bb7;
+}
+.social-network a.icoInstagram:hover {
+    background-color: #125688;
+}
+.social-network a.icoSkype:hover {
+    background-color: #12A5F4;
+}
+.social-network a.icoEnvelope:hover {
+    background-color: #22263D;
 }
 
-.social {
-   text-shadow: rgb(226, 226, 226) 1px 1px,
-    rgb(227, 227, 227) 2px 2px,
-    rgb(227, 227, 227) 3px 3px,
-    rgb(228, 228, 228) 4px 4px,
-    rgb(229, 229, 229) 5px 5px,
-    rgb(229, 229, 229) 6px 6px,
-    rgb(230, 230, 230) 7px 7px,
-    rgb(230, 230, 230) 8px 8px,
-    rgb(231, 231, 231) 9px 9px,
-    rgb(232, 232, 232) 10px 10px,
-    rgb(232, 232, 232) 11px 11px,
-    rgb(233, 233, 233) 12px 12px,
-    rgb(233, 233, 233) 13px 13px,
-    rgb(234, 234, 234) 14px 14px,
-    rgb(235, 235, 235) 15px 15px,
-    rgb(235, 235, 235) 16px 16px,
-    rgb(236, 236, 236) 17px 17px,
-    rgb(236, 236, 236) 18px 18px,
-    rgb(237, 237, 237) 19px 19px,
-    rgb(238, 238, 238) 20px 20px;
+
+
+.social-network a.icoYouTube:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i,
+.social-network a.icoInstagram:hover i, .social-network a.icoSkype:hover i, .social-network a.icoEnvelope:hover i {
+	color:#fff;
 }
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #696969;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+
+
+
 
 
 

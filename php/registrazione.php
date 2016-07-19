@@ -1,4 +1,6 @@
 <?php
+session_start();
+$_SESSION['login'] = "no";
 #Registrati nel DB	
 $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
 // Check connection
@@ -67,10 +69,52 @@ $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
             { 
                 $Password=$_POST['Password']; 
             }  
-        if (isset($_POST['Fattura']))
-            { 
-                $Fattura=$_POST['Fattura']; 
-            }  
+        $Fattura="fattura";
+        
+        if($Nome1 == "" || $Cognome == "" || $Nascita == "" || $Luogo_Nascita == "" || $Telefono == "" || $Mail == "" || $Indirizzo == "" || $CAP == "" || $Comune == "" || $Provincia == "" || $Password == ""){echo"Dati Mancanti!";exit(); } 
+        
+        if(!eregi("^[_a-z0-9+-]+(\.[_a-z0-9+-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)+$",$Mail)){
+echo "email non valida";exit();} 
+        
+
+$split = explode("-", $Nascita);
+
+if (!checkdate($split[1], $split[2], $split[0])) {
+    echo"la data non è valida";
+    exit();
+}
+        else{
+            $oggi=date("Y-n-j");
+            $split2=explode("-",$oggi);
+            $diffanni=$split2[0]-$split[0];
+            $diffmesi=$split2[1]-$split[1];
+            $diffgiorni=$split2[2]-$split[2];
+            
+            if($diffanni>112)
+            {
+               echo"Sei la persona piu vecchia del mondo??? Riprova";exit(); 
+            }
+            
+            if($diffanni<18){
+                echo"Devi essere maggiorenne";exit();}
+                else
+                {
+                    if($diffanni==18 && $diffmesi<0){
+                    echo"Devi essere maggiorenne";exit();}
+                    else
+                    {
+                        if($diffanni==18 && $diffmesi==0 && $diffgiorni<0){
+                    echo"Devi essere maggiorenne";exit();}
+                    }
+                }
+            
+        }
+        
+        if (!is_numeric($Telefono)){
+echo "Telefono deve essere un numero";exit();} 
+              if (!is_numeric($CAP)){
+echo "CAP non valido deve essere un numero";exit();
+} 
 
         
 
@@ -80,6 +124,7 @@ $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
     if ($st)
     {
     	echo "registrazione avvenuta";
+	   setcookie("login","$idCliente",time()+3600);
         
     }
     else

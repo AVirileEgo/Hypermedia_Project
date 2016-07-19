@@ -1,7 +1,7 @@
 <?php
     
 #cerca i prodotti nel carrello
-	if ($_GET["type"]=="carrello" && $_GET["cliente"]==1){
+	if ($_GET["type"]=="carrello"){
 $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
         // Check connection
 		if ($conn->connect_error) {
