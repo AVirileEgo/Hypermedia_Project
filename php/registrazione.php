@@ -1,6 +1,4 @@
 <?php
-session_start();
-$_SESSION['login'] = "no";
 #Registrati nel DB	
 $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
 // Check connection

@@ -1,5 +1,14 @@
+
+
+
+
+
+
+
+
 $( document ).ready(function() {
-        
+    
+
 
 				$.getJSON( "php/Prodotto.php?type=smartphone&prodotto="+QueryString.prodotto)
                 .done(function(json){
@@ -108,5 +117,29 @@ $( document ).ready(function() {
                     
                     
                           })
+                
+                
+                
+                $.getJSON( "php/controlla.php")
+                .done(function(json){
+                    
+                        
+                    if(json[0]=='e'){
+                        
+                        
+                        var prova= "<button type=\"button\" disabled class=\"btn btn-danger btn-large btn-block\" style=\"max-width:300px;\" id=\"submit\" onclick=\"controlla()\">Aggiungi al carrello - devi prima accedere</button>"
+                    }    
+        else{
+            var prova= "<button type=\"button\" class=\"btn btn-primary btn-large btn-block\" style=\"max-width:200px;\" id=\"submit\" onclick=\"controlla()\">Aggiungi al carrello</button>"
+            
+        }
+				
+                    $("#pulsante").append(prova);
+                    
+                   
+                          })
+                
+                
+                
                 .fail(function(){alert("errore")});
                 });

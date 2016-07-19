@@ -1,15 +1,13 @@
 <?php
-    
-#cerca i prodotti nel carrello
-	if ($_GET["type"]=="carrello"){
+if ($_GET["type"]=="cliente")
+    {
 $conn = new mysqli('', '', '', 'my_rivatardinizizzari');
         // Check connection
 		if ($conn->connect_error) {
-			die("Connection failed: " . $conn->connect_error);
-		} 
-     
-    else {
-		$sql = "SELECT idProdotto,IMG_FRONT,Nome,Prezzo FROM carrello, prodotto WHERE idProdotto=Prodotto_idProdotto AND Cliente_idCliente=".$_GET["car"];
+			die("Connection failed: " . $conn->connect_error);} 
+			
+			else {
+		$sql = "SELECT * FROM ordine WHERE Cliente_idCliente=2";
 		$result = $conn->query($sql);
         
 

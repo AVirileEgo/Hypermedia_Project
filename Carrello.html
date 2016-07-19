@@ -19,9 +19,14 @@
   <![endif]-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="js/carrello.js"></script>
+<script src="js/common.js"></script>
  <script type="text/javascript" src="js/registrazione.js"></script>
   <script src="js/Home.js"></script>
   <script src="js/login.js"></script>
+  <script src="js/acquista.js"></script>
+  <script src="js/cancella.js"></script>
+
+  
  </head>
  <body>
  
@@ -30,8 +35,7 @@
  <li><a href="Chi%20siamo.html">Chi Siamo</a></li>
  <li><a href="Il%20Guppo.html">Il Gruppo</a></li>
  <li><a href="Contatti.html">Contatti</a></li>
- <li><a href="Carrello.html">Carrello</a></li>
-</ul>
+<li id="car"></li></ul>
  </div>
  
   <nav class="navbar navbar-default">
@@ -237,17 +241,28 @@
  <div class="row" style=" margin-left:10px; margin-right:10px; min-height:500px;"  >
        <div class="col-lg-12 col-sm-12 col-xs-12" style="color:#337ab7"><h2>Riepilogo</h2></div>
        
-       <div class="col-lg-3 col-sm-3 col-xs-3" ></div>
-       <div class="col-lg-3 col-sm-3 col-xs-3" style=" padding:10px;border:5px solid #e8e8e8;">Nome Prodotto</div>
-       <div class="col-lg-3 col-sm-3 col-xs-3" style=" padding:10px;border:5px solid #e8e8e8;">Prezzo</div>
-       <div class="col-lg-3 col-sm-3 col-xs-3" ></div>
+       <div class="col-lg-4 col-sm-4 col-xs-4" ></div>
+       <div class="col-lg-4 col-sm-4 col-xs-4" style=" padding:10px;border:0px solid #e8e8e8; color:#337ab7;"><h3>Nome Prodotto</h3></div>
+       <div class="col-lg-4 col-sm-4 col-xs-4" style=" padding:10px;border:0px solid #e8e8e8;color:#337ab7;"><h3>Prezzo</h3></div>
        
-        <div class="col-lg-12 col-sm-12 col-xs-12" style=" padding:10px;border:5px solid #e8e8e8;" id="elenco">
+        <div class="col-lg-12 col-sm-12 col-xs-12" style=" padding:10px;border:0px solid #e8e8e8;" id="elenco">
         
         
        
         
-        </div>  
+        </div> 
+        <div class="col-lg-4 col-sm-4 col-xs-4" ></div>
+        <div class="col-lg-4 col-sm-4 col-xs-4" ><h1 style="color:#337ab7;">TOTALE:</h1></div>
+        <div class="col-lg-4 col-sm-4 col-xs-4" ><h1 style="color:#337ab7;" id="totale"></h1></div>
+        <br/><br/>
+        <div class="col-lg-6 col-sm-6 col-xs-6" style="margin-top:20px; padding:10px;border:0px solid #e8e8e8;">
+            <button type="button" class="btn btn-danger btn-large btn-block" style="max-width:200px;" id="submit" onclick="acquista()" onmouseup="cancella()">Acquista</button>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-6" style="margin-top:20px; padding:10px;border:0px solid #e8e8e8;">
+            <button type="button" class="btn btn-danger btn-large btn-block" style="max-width:200px;" id="submit" onclick="cancella()">Cancella tutto</button>
+        </div>
+        
+        
         
     </div>
  

@@ -23,6 +23,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/cliente.js"> </script>
+  <script src="js/oridni.js"> </script>
    <script type="text/javascript" src="js/registrazione.js"></script>
   <script src="js/Home.js"></script>
   <script src="js/login.js"></script>
@@ -39,8 +40,7 @@
  <li><a href="Chi%20siamo.html">Chi Siamo</a></li>
  <li><a href="Il%20Guppo.html">Il Gruppo</a></li>
  <li><a href="Contatti.html">Contatti</a></li>
- <li><a href="Carrello.html">Carrello</a></li>
-</ul>
+<li id="car"></li></ul>
  </div>
  
   <nav class="navbar navbar-default">
@@ -90,137 +90,6 @@
         <li class="dropdown">
          
           <a href="MYSTIM.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" auto-close="disabled"> MySTIM </a>
-          <ul class="dropdown-menu" style="min-width:300px;">
-          <form>
-           <li>
-              <div style="padding:5px;">
-                  <ul class="nav nav-tabs">
-                  
-                  <li class="active"><a data-toggle="tab" href="#home" style="font-size:18px;"><b>Registrazione</b></a></li>
-                  
-                  <li><a data-toggle="tab" href="#menu1" style="font-size:18px;"><b>Login</b></a></li>
-        </ul>
-              
- <div class="tab-content">
- <div id="home" class="tab-pane fade in active">
-                          
-                          
-                          
-                          
-    <div id="form">
-    <form action="registrazione.php" method="post" id="form_ajax">
-        <div class="input-group" style="margin:5px;" id="codice"></div>
-       
-       <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Nome:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Nome1" id="Nome1">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Cognome:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Cognome" id="Cognome">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Sesso:</span>
-          <select name="Sesso" id="Sesso" class="form-control" style="border-raius-top-left:0px;">
-            <option value="M">M</option>
-            <option value="F">F</option>
-        </select>
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Data Nascita:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Nascita" id="Nascita" placeholder="yyyy-mm-dd">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Luogo Nascita:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Luogo_Nascita" id="Luogo_Nascita">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Telefono:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Telefono" id="Telefono">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Mail:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Mail" id="Mail">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Indirizzo:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Indirizzo" id="Indirizzo">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">CAP:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="CAP" id="CAP" maxlength="5" placeholder="Massimo 5 numeri">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Comune:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Comune" id="Comune">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Provincia:</span>
-          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Provincia" id="Provincia"
-          placeholder="Massimo 2 lettere" maxlength="2">
-        </div>
-        
-        <div class="input-group" style="margin:5px;">
-          <span class="input-group-addon" id="basic-addon1">Password:</span>
-          <input type="Password" class="form-control" aria-describedby="basic-addon1" name="Password" id="Password">
-        </div>
-        
-      
-      
-        
-        <p style="text-align:center;">
-        
-        <button type="submit" class="btn btn-default btn-primary" value="invia" id="submit" style="padding:auto; width:80%;">Registrati</button></p>
-    </form>
-</div>
-                         
-                              
-                          </div>
-                          
-<div id="menu1" class="tab-pane fade">
-    
-     <form action="php/process.php" method="post" id="login">
-	<ul style="padding-left:5px;">
-       <li class="input-group" style="margin:5px;">
-			<label class="input-group-addon" id="basic-addon0" for="idCliente1">IdCliente</label>
-			<input class="form-control" aria-describedby="basic-addon0" type="text" name="idCliente1" id="idCliente1" />
-		</li>
-        <li class="input-group" style="margin:5px;">
-			<label class="input-group-addon" id="basic-addon1" for="Telefono1">Telefono</label>
-			<input class="form-control" aria-describedby="basic-addon1" type="text" name="Telefono" id="Telefono1" />
-		</li>
-		<li class="input-group" style="margin:5px;">
-			<label class="input-group-addon" id="basic-addon2" for="Password1">Password</label>
-			<input class="form-control" aria-describedby="basic-addon2" type="password" name="Password" id="Password1" />
-		</li>
-	</ul>
-	<p style="text-align:center;"><button type="submit" class="btn btn-default btn-primary" id="submit" style="padding:auto; width:80%;">Accedi</button></p>
-	
-</form>
-                         
-                         
-                         
-                         
-                          </div>
-  
-                </div>
-               
-               </div>
-           </li>
-          
-           
-           </form>
-          </ul>
         </li>   
 
       </ul>
@@ -242,34 +111,34 @@
                <div class="col-lg-8 col-sm-8 col-xs-8" style="background: transparent;" ><div class="titolo" ></div></div>
                 <div class="col-lg-4 col-sm-4 col-xs-12" style="background: #e8e8e8;" >
                     <div class="bordo" style="padding-top:10px; margin-right:3px; border-top:0px; text-align:left; padding-left:5px;">
-                    <div  style="float:left;" ><b>Codice Cliente:</b></div><div id="codice">&nbsp </div>
-                    <div  style="float:left;" ><b>Nome:</b></div><div id="nome1">&nbsp</div>
-                    <div  style="float:left;" ><b>Cognome:</b></div><div id="Cognome">&nbsp </div>
-                    <div  style="float:left;" ><b>Sesso:</b></div><div id="Sesso" >&nbsp </div>
-                    <div style="float:left;" ><b>Data di nascita:</b></div><div id="Data" >&nbsp </div>
-                    <div  style="float:left;" ><b>Luogo di Nascita:</b></div><div id="Luogo" >&nbsp </div>
-                    <div  style="float:left;" ><b>Telefono:</b></div><div id="Telefono">&nbsp </div>
-                    <div  style="float:left;" ><b>Indirizzo mail:</b></div><div id="mail">&nbsp </div>
+                    <div  style="float:left;" ><b>Codice Cliente:</b></div><div id="1codice">&nbsp </div>
+                    <div  style="float:left;" ><b>Nome:</b></div><div id="1nome1">&nbsp</div>
+                    <div  style="float:left;" ><b>Cognome:</b></div><div id="1Cognome">&nbsp </div>
+                    <div  style="float:left;" ><b>Sesso:</b></div><div id="1Sesso" >&nbsp </div>
+                    <div style="float:left;" ><b>Data di nascita:</b></div><div id="1Data" >&nbsp </div>
+                    <div  style="float:left;" ><b>Luogo di Nascita:</b></div><div id="1Luogo" >&nbsp </div>
+                    <div  style="float:left;" ><b>Telefono:</b></div><div id="1Telefono">&nbsp </div>
+                    <div  style="float:left;" ><b>Indirizzo mail:</b></div><div id="1mail">&nbsp </div>
                         <br/>
                     <div style="float:left; font-size:18px;" ><b>Indirizzo di residenza</b></div><br/><br/>
                     
-                     <div  style="float:left;" ><b>Indirizzo:</b></div><div id="Indirizzo" >&nbsp </div>
-                      <div  style="float:left;" ><b>CAP:</b></div><div id="CAP">&nbsp</div>
-                       <div  style="float:left;" ><b>Comune:</b></div><div id="Comune" >&nbsp </div>
-                        <div  style="float:left;" ><b>Provincia:</b></div><div id="Provincia">&nbsp </div>
+                     <div  style="float:left;" ><b>Indirizzo:</b></div><div id="1Indirizzo" >&nbsp </div>
+                      <div  style="float:left;" ><b>CAP:</b></div><div id="1CAP">&nbsp</div>
+                       <div  style="float:left;" ><b>Comune:</b></div><div id="1Comune" >&nbsp </div>
+                        <div  style="float:left;" ><b>Provincia:</b></div><div id="1Provincia">&nbsp </div>
                     
                     </div>
                 </div>
                 <div class="col-lg-8 col-sm-8 col-xs-12" style="background: transparent;" >
                     <div class="bordo" style="padding-top:10px; padding-left:10px; border-top:0px;">
                     <ul class="nav nav-tabs">
-  <li class="active"><a data-toggle="tab" href="#home">Riepilogo</a></li>
-  <li><a data-toggle="tab" href="#menu1">Ultima Fattura</a></li>
-  <li><a data-toggle="tab" href="#menu2">I miei Ordini</a></li>
+  <li class="active"><a data-toggle="tab" href="#home11">Riepilogo</a></li>
+  <li><a data-toggle="tab" href="#menu11">Ultima Fattura</a></li>
+  <li><a data-toggle="tab" href="#menu21">I miei Ordini</a></li>
 </ul>
 
 <div class="tab-content" style="min-height=500px;">
-  <div id="home" class="tab-pane fade in active">
+  <div id="home11" class="tab-pane fade in active">
         <h3>Offerte attive:</h3>
         <div class="row" id="cicloofferte">
            
@@ -281,18 +150,17 @@
         </div>
         
   </div>
-  <div id="menu1" class="tab-pane fade" style="min-height:300px; min-height:400px;">
+  <div id="menu11" class="tab-pane fade" style="min-height:300px; min-height:400px;">
     <h3>Ultima Fattura</h3>
-    <p id="Fattura">
+    <p id="1Fattura">
         
     </p>
   </div>
-  <div id="menu2" class="tab-pane fade" style="min-height:400px;">
+  <div id="menu21" class="tab-pane fade" style="min-height:400px;">
     <h3>I miei ordini</h3>
     <div class="row" style="min-height=500px; padding-bot:500px;">
-        <div class="col-lg-4 col-sm-4 col-xs-4" style="background: transparent; padding-top:10px;" ><b>NUMERO ORDINE:</b></div>
-        <div class="col-lg-4 col-sm-4 col-xs-4" style="background: transparent; padding-top:10px;"><b>DATA:</b></div>
-        <div class="col-lg-4 col-sm-4 col-xs-4" style="background: transparent; padding-top:10px;"><b>VALORE:</b></div>
+        <div class="col-lg-6 col-sm-6 col-xs-6" style="background: transparent; padding-top:10px;"><h2>DATA:</h2></div>
+        <div class="col-lg-6 col-sm-6 col-xs-6" style="background: transparent; padding-top:10px;"><h2>VALORE:</h2></div>
         <div id="ordine">
         
         </div>

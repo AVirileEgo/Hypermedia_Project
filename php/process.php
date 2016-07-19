@@ -1,7 +1,5 @@
 <?php
 header('Content-Type: text/html');
-session_start();
-$_SESSION['login'] = "no";
 
 $connection = mysql_connect('', '', '');
 mysql_select_db('my_rivatardinizizzari', $connection);

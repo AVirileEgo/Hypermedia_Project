@@ -1,4 +1,27 @@
 $( document ).ready(function() {
+    var car= "<a href=\"Carrello.html\">Carrello - Devi prica accedere</a>"
+    
+    $.getJSON( "php/controlla.php")
+                .done(function(json){
+                    
+                        
+                    if(json[0]=='e'){
+                        
+                        
+                        var car= "<a>Carrello - Devi prima accedere</a>"
+                    }    
+        else{
+            var car= "<a href=\"Carrello.html?type=carrello&car="+json[0]+"\">Carrello</a>"
+            
+        }
+				
+                    $("#car").append(car);
+                    
+                   
+                          })
+                
+    
+    
 
 				$.getJSON( "php/home.php?type=home")
                 .done(function(json){

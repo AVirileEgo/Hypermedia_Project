@@ -23,7 +23,7 @@ $(function()
                             type:'POST',
                             data: 'idCliente='+idCliente+'&Nome1='+Nome1+'&Cognome='+Cognome+'&Sesso='+Sesso+'&Nascita='+Nascita+'&Luogo_Nascita='+Luogo_Nascita+'&Telefono='+Telefono+'&Mail='+Mail+'&Indirizzo='+Indirizzo+'&CAP='+CAP+'&Comune='+Comune+'&Provincia='+Provincia+'&Password='+Password+'&Fattura='+Fattura,
                             success: function(res) {
-                                $('risposta').remove();
+                                $('#risposta').remove();
                                 $('#form').append('<p id="risposta">'+res+'</p>');
                                 if(res=='registrazione avvenuta'){
                                 window.location.href='http:MYSTIM.html?type=codice&id='+idCliente;}
