@@ -19,7 +19,7 @@ $(function()
              var Fattura=$('#Fattura').val();
              
          $.ajax({
-                            url:'http://rivatardinizizzari.altervista.org/php/registrazione.php',
+                            url:'/php/registrazione.php',
                             type:'POST',
                             data: 'idCliente='+idCliente+'&Nome1='+Nome1+'&Cognome='+Cognome+'&Sesso='+Sesso+'&Nascita='+Nascita+'&Luogo_Nascita='+Luogo_Nascita+'&Telefono='+Telefono+'&Mail='+Mail+'&Indirizzo='+Indirizzo+'&CAP='+CAP+'&Comune='+Comune+'&Provincia='+Provincia+'&Password='+Password+'&Fattura='+Fattura,
                             success: function(res) {
