@@ -2,8 +2,8 @@
     
  # cerca asssitenze in highlights
 	if ($_GET["type"]=="highlights"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 

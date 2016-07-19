@@ -1,14 +1,14 @@
 <?php
  #cerca tutte le offerte ordinandole per categoria
 	if ($_GET["type"]=="alloff"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
-		// Check connection
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 
      
     else {
-		$sql = "SELECT idOfferta,imgSL,Categoria FROM Offerta ORDER BY Categoria";
+		$sql = "SELECT idOfferta,imgSL,Categoria FROM offerta ORDER BY Categoria";
 		$result = $conn->query($sql);
         
 

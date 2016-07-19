@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-				$.getJSON( "php/Allassistenze.php?type=allass")
+				$.getJSON( "php/AllAssistenze.php?type=allass")
                 .done(function(json){
                     
                     for(i=0;i<json.length;i++){

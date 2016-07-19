@@ -1,36 +1,36 @@
 $( document ).ready(function() {
 
-				$.getJSON( "php/Cliente.php?type=cliente&id=2")
+				$.getJSON( "php/Cliente.php?type=cliente&id="+QueryString.id)
                 .done(function(json){
                     
 
                     var Codice=json[0].idCliente;
-                    $("#codice").append(Codice);
+                    $("#1codice").append(Codice);
                     var nome1=json[0].Nome1;
-                    $("#nome1").append(nome1);
+                    $("#1nome1").append(nome1);
                     var Cognome=json[0].Cognome;
-                    $("#Cognome").append(Cognome);
+                    $("#1Cognome").append(Cognome);
                     var Sesso=json[0].Sesso;
-                    $("#Sesso").append(Sesso);
+                    $("#1Sesso").append(Sesso);
                     var Data=json[0].Nascita;
-                    $("#Data").append(Data);
+                    $("#1Data").append(Data);
                     var Luogo=json[0].Luogo_nascita;
-                    $("#Luogo").append(Luogo);
+                    $("#1Luogo").append(Luogo);
                     var Telefono=json[0].Telefono;
-                    $("#Telefono").append(Telefono);
+                    $("#1Telefono").append(Telefono);
                     var mail=json[0].Mail;
-                    $("#mail").append(mail);
+                    $("#1mail").append(mail);
                     var Indirizzo=json[0].Indirizzo;
-                    $("#Indirizzo").append(Indirizzo);
+                    $("#1Indirizzo").append(Indirizzo);
                     
                     var CAP=json[0].CAP;
-                    $("#CAP").append(CAP);
+                    $("#1CAP").append(CAP);
                     var Comune=json[0].Comune;
-                    $("#Comune").append(Comune);
+                    $("#1Comune").append(Comune);
                     var Provincia=json[0].Provincia;
-                    $("#Provincia").append(Provincia);
+                    $("#1Provincia").append(Provincia);
                     var Fattura="<embed class=\"flex\" width=\"600\" height=\"400\" src=\"img/myarea/"+json[0].Fattura+".pdf\">";
-                    $("#Fattura").append(Fattura);
+                    $("#1Fattura").append(Fattura);
 
                     
                     
@@ -70,41 +70,6 @@ $( document ).ready(function() {
                     
                     
                     
-                    
-                    if(json[0].Totale!=undefined){
-                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-4\" style=\"background: transparent\"><b>1</b></div><div class=\"col-lg-4 col-sm-4 col-xs-4\"style=\"background: transparent\" ><b>"+json[0].Data+"</b></div><div class=\"col-lg-4 col-sm-4 col-xs-4\" style=\"background: transparent\" ><b>"+json[0].Totale+"</b></div>"
-                        $("#ordine").append(div);
-                        appoggio2= new Array();
-                        appoggio2.push(json[0].Totale);
-                        $conta=1;
-                    
-                        
-                        if(json[1].Totale!=undefined){
-                        for(i=1;i<json.length;i++)
-                        {
-                            verifica=1;
-                            for (y=0;y<i;y++)
-                            {
-                                if(json[i].Totale==appoggio2[y])
-                                {
-                                    verifica=0;
-                                }
-                            }
-                            if (verifica!=0){
-                                var div="<div class=\"col-lg-4 col-sm-4 col-xs-4\" style=\"background: transparent\"><b>"+i+"</b></div><div class=\"col-lg-4 col-sm-4 col-xs-4\"style=\"background: transparent\" ><b>"+json[y].Data+"</b></div><div class=\"col-lg-4 col-sm-4 col-xs-4\" style=\"background: transparent\" ><b>"+json[y].Totale+"</b></div>"
-                        $("#ordine").append(div);
-                                appoggio2.push(json[y].Totale);
-                            }
-                        }
-                        
-                        }
-                        
-                        }
-                    else 
-                    {
-                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-4\" style=\" padding:10px;\"><h4 style=\"color:grey;\"><b>NON HAI OFFERTE ATTIVE<br/><br/>Scegli quella piu adatta a te nella pagina delle offerte</b></h4></div>"
-                    $("#cicloofferte").append(div)
-                    }
                     
                    
                     

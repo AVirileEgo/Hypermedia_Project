@@ -2,7 +2,7 @@
     
  # cerca tutte le assistenze
 	if ($_GET["type"]=="allass"){
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
+		$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);

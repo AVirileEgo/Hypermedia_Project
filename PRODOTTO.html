@@ -10,7 +10,7 @@
   <!-- Fogli di stile -->
   <link href="css/bootstrap.css" rel="stylesheet" media="screen">
   <link href="css/stili-custom.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" href="mystyle.css" type="text/css" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!-- Modernizr -->
   <script src="js/modernizr.custom.js"></script>
   <!-- respond.js per IE8 -->
@@ -20,17 +20,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="js/common.js"></script>
 <script src="js/Prodotto.js"></script>
+  <script type="text/javascript" src="js/registrazione.js"></script>
+  <script src="js/Home.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/controlla.js"></script>
   
  </head>
  <body>
  
- <div class="contenitore">
+ <div class="contenitore" style="height:40px; padding-top:7px;" >
  <ul class="nav nav-pills">
  <li><a href="Chi%20siamo.html">Chi Siamo</a></li>
  <li><a href="Il%20Guppo.html">Il Gruppo</a></li>
  <li><a href="Contatti.html">Contatti</a></li>
- <li><a href="Carrello.html">Carrello</a></li>
-</ul>
+<li id="car"></li></ul>
  </div>
  
   <nav class="navbar navbar-default">
@@ -43,43 +46,175 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="Index.html"><img src="img/home/LOGO.jpg" class="img-responsive"></a>
+      <a class="navbar-brand" href="http://rivatardinizizzari.altervista.org/index.html"><img src="img/home/LOGO.jpg" class="img-responsive"></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="PRODOTTI-Categorie%20Prodotti.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Prodotti <span class="caret"></span></a>
+          <a href="PRODOTTI-Categorie%20Prodotti.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Prodotti <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="PRODOTTI%20-%20tutti%20i%20prodotti.html">Tutti i prodotti</a></li>
+            <li><a href="PRODOTTI%20-%20tutti%20i%20prodotti.html"> Tutti i prodotti</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="PRODOTTI-Categorie%20Prodotti.html">Categorie di prodotti</a></li>
+            <li><a href="PRODOTTI-Categorie%20Prodotti.html"> Categorie di prodotti</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="PRODOTTI%20-%20outlet.html">Outlet</a></li>
+            <li><a href="PRODOTTI%20-%20outlet.html"> Outlet</a></li>
           </ul>
         <li class="dropdown">
-          <a href="SMARTLIFE-Categorie%20servizi.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Smart Life <span class="caret"></span></a>
+          <a href="SMARTLIFE-Categorie%20servizi.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Smart Life <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="SMARTLIFE-tutti%20i%20servizi.html">Servizi Smart Life</a></li>
+            <li><a href="SMARTLIFE-tutti%20i%20servizi.html"> Servizi Smart Life</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="SMARTLIFE-Categorie%20servizi.html">Categorie di Servizi SL</a></li>
+            <li><a href="SMARTLIFE-Categorie%20servizi.html"> Categorie di Servizi SL</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="SMARTLIFE-%20Promozioni.html">Promozioni</a></li>
+            <li><a href="SMARTLIFE-%20Promozioni.html"> Promozioni</a></li>
           </ul>
         <li class="dropdown">
-          <a href="ASSISTENZA-Categorie%20assistenza.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Assistenza <span class="caret"></span></a>
+          <a href="ASSISTENZA-Categorie%20assistenza.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Assistenza <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="ASSISTENZA-Tutti%20i%20servizi.html"> Servizi di Assistenza</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="ASSISTENZA-Categorie%20assistenza.html">Categorie di Assistenza</a></li>
+            <li><a href="ASSISTENZA-Categorie%20assistenza.html"> Categorie di Assistenza</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="ASSISTENZA-highlights.html">Highlights</a></li>
+            <li><a href="ASSISTENZA-highlights.html"> Highlights</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="MYSTIM.html" class="dropdown-toggle"> MySTIM </a>
-        </li>       
+         
+          <a href="MYSTIM.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" auto-close="disabled"> MySTIM </a>
+          <ul class="dropdown-menu" style="min-width:300px;">
+          <form>
+           <li>
+              <div style="padding:5px;">
+                  <ul class="nav nav-tabs">
+                  
+                  <li class="active"><a data-toggle="tab" href="#home" style="font-size:18px;"><b>Registrazione</b></a></li>
+                  
+                  <li><a data-toggle="tab" href="#menu1" style="font-size:18px;"><b>Login</b></a></li>
+        </ul>
+              
+ <div class="tab-content">
+ <div id="home" class="tab-pane fade in active">
+                          
+                          
+                          
+                          
+    <div id="form">
+    <form action="registrazione.php" method="post" id="form_ajax">
+        <div class="input-group" style="margin:5px;" id="codice"></div>
+       
+       <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Nome:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Nome1" id="Nome1">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Cognome:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Cognome" id="Cognome">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Sesso:</span>
+          <select name="Sesso" id="Sesso" class="form-control" style="border-raius-top-left:0px;">
+            <option value="M">M</option>
+            <option value="F">F</option>
+        </select>
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Data Nascita:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Nascita" id="Nascita" placeholder="yyyy-mm-dd">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Luogo Nascita:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Luogo_Nascita" id="Luogo_Nascita">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Telefono:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Telefono" id="Telefono">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Mail:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Mail" id="Mail">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Indirizzo:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Indirizzo" id="Indirizzo">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">CAP:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="CAP" id="CAP" maxlength="5" placeholder="Massimo 5 numeri">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Comune:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Comune" id="Comune">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Provincia:</span>
+          <input type="text" class="form-control" aria-describedby="basic-addon1" name="Provincia" id="Provincia"
+          placeholder="Massimo 2 lettere" maxlength="2">
+        </div>
+        
+        <div class="input-group" style="margin:5px;">
+          <span class="input-group-addon" id="basic-addon1">Password:</span>
+          <input type="Password" class="form-control" aria-describedby="basic-addon1" name="Password" id="Password">
+        </div>
+        
+      
+      
+        
+        <p style="text-align:center;">
+        
+        <button type="submit" class="btn btn-default btn-primary" value="invia" id="submit" style="padding:auto; width:80%;">Registrati</button></p>
+    </form>
+</div>
+                         
+                              
+                          </div>
+                          
+<div id="menu1" class="tab-pane fade">
+    
+     <form action="php/process.php" method="post" id="login">
+	<ul style="padding-left:5px;">
+       <li class="input-group" style="margin:5px;">
+			<label class="input-group-addon" id="basic-addon0" for="idCliente1">IdCliente</label>
+			<input class="form-control" aria-describedby="basic-addon0" type="text" name="idCliente1" id="idCliente1" />
+		</li>
+        <li class="input-group" style="margin:5px;">
+			<label class="input-group-addon" id="basic-addon1" for="Telefono1">Telefono</label>
+			<input class="form-control" aria-describedby="basic-addon1" type="text" name="Telefono" id="Telefono1" />
+		</li>
+		<li class="input-group" style="margin:5px;">
+			<label class="input-group-addon" id="basic-addon2" for="Password1">Password</label>
+			<input class="form-control" aria-describedby="basic-addon2" type="password" name="Password" id="Password1" />
+		</li>
+	</ul>
+	<p style="text-align:center;"><button type="submit" class="btn btn-default btn-primary" id="submit" style="padding:auto; width:80%;">Accedi</button></p>
+	
+</form>
+                         
+                         
+                         
+                         
+                          </div>
+  
+                </div>
+               
+               </div>
+           </li>
+          
+           
+           </form>
+          </ul>
+        </li>   
 
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -142,7 +277,9 @@
 
     <div style="color:#337ab7; text-align:left;"><h2 id="Prezzo"><b> €</b></h2></div>
     <br/>
-    <button type="button" class="btn btn-primary btn-large btn-block" style="max-width:200px;">Aggiungi al carrello</button>
+    
+    <div id="pulsante">
+    </div>
     
 
     </div>
@@ -153,15 +290,15 @@
      
      <div style="padding-left:20px;">
      <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home" style="font-size:18px;"><b>Descrizione</b></a></li>
-         <li><a data-toggle="tab" href="#menu1" style="font-size:18px;"><b>Specifiche Tecniche</b></a></li>
+      <li class="active"><a data-toggle="tab" href="#home10" style="font-size:18px;"><b>Descrizione</b></a></li>
+         <li><a data-toggle="tab" href="#menu10" style="font-size:18px;"><b>Specifiche Tecniche</b></a></li>
         </ul>
 
 <div class="tab-content">
-  <div id="home" class="tab-pane fade in active">
+  <div id="home10" class="tab-pane fade in active">
     <p style="font-size:18px; text-align:left; padding:10px;" id="Descrizione"><br/></p>
   </div>
-  <div id="menu1" class="tab-pane fade">
+  <div id="menu10" class="tab-pane fade">
     <p style="font-size:18px; text-align:left; padding:10px;" id="Specifiche"></p>
   </div>
   
@@ -199,30 +336,52 @@
  
  
  
- <div class="contenitorebottom">
+<div class="contenitorebottom" style="padding-bottom:50px;">
      <div class="row">
-  		<div class="col-lg-4 col-sm-4 col-xs-4" >
-  		    <h4>INFORMAZIONI UTILI</h4>
-  		    <a href="#" ><h5>► Domande Frequenti</h5></a>
-            <a href="#" ><h5>► News e comunicazioni</h5></a>
-            <a href="#" ><h5>► Phishing</h5></a>
-            <a href="#" ><h5>► Privacy</h5></a>
-            <a href="#" ><h5>► Tutela dei Minori</h5></a>
-  		    
-  		</div>
-        <div class="col-lg-4 col-sm-4 col-xs-4" >
-        <h4>STRUMENTI VELOCI</h4>
-  		    <a href="#" ><h5>► Brochure</h5></a>
-            <a href="#" ><h5>► Validità SIM</h5></a>
-            <a href="#" ><h5>► Elenco NEGOZI</h5></a>
-            <a href="#" ><h5>► Copertura 4G</h5></a>
+        <div class="col-lg-12 col-sm-12 col-xs-12" style="padding-top:10px;" >
+            <ul class="social-network social-circle">
+                        <li><a href="https://www.youtube.com/channel/UCTMK0PCe4wPrvreBvnrw8yw" class="icoYouTube" title="YouTube"  target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="https://plus.google.com/s/stim%20hypermedia" class="icoGoogle" title="Google +" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="https://www.facebook.com/Stim-1675749462749850/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/Stim_Hypermedia" class="icoTwitter" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/stim.hypermedia/" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="mailto:stim.hypermedia@gmail.com" class="icoEnvelope" title="Instagram"><i class="fa fa-envelope" target="_blank"></i></a></li>
+                    </ul>	
         </div>
-        <div class="col-lg-4 col-sm-4 col-xs-4" >
-            <h5>SEGUICI SU:</h5><br/>
-            <a href="#" ><button type="button" class="btn btn-primary">Facebook</button></a><br/><br/>
-            <a href="#" ><button type="button" class="btn btn-info">Twitter</button></a><br/><br/>
-            <a href="#" ><button type="button" class="btn btn-danger">Youtube</button></a><br/><br/>
-        </div>
+        
+        <div class="row" style="padding-right:20px;">
+                <div class="col-lg-4  col-md-4 col-sm-4 col-xs-4">
+                    <ul type="none" >
+                       <li style="text-align:left;"> <h3 style="text-align:left; color:#696969;"> Servizi Veloci </h3> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=4" ><h5> Validità SIM</h5></a> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=26" ><h5> Ricarica nei negozi</h5></a> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=9" ><h5> Rimborsi</h5></a> </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4 col-xs-4">
+                    
+                    <ul type="none">
+                       <li style="text-align:left;"> <h3 style="text-align:left; color:#696969;">Info Utili </h3> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=19" ><h5> Carta dei servizi</h5></a> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=38" ><h5> Disdetta abbonamento</h5></a> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=39" ><h5> Assistenza fisso</h5></a> </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-4  col-md-4 col-sm-4 col-xs-4">
+                    
+                    <ul type="none">
+                       <li style="text-align:left;"> <h3 style="text-align:left; color:#696969;"> Sicurezza </h3> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=15" ><h5> Privacy</h5></a> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=17" ><h5> Tutela dei Minori</h5></a> </li>
+                        <li style="text-align:left;"> <a href="http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice=14"><h5> Phising </h5></a> </li>
+                        
+                    </ul>
+                </div>
+                
+                
+            </div>
+
   </div>
  </div>
 

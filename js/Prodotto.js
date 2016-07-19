@@ -1,4 +1,14 @@
+
+
+
+
+
+
+
+
 $( document ).ready(function() {
+    
+
 
 				$.getJSON( "php/Prodotto.php?type=smartphone&prodotto="+QueryString.prodotto)
                 .done(function(json){
@@ -22,8 +32,8 @@ $( document ).ready(function() {
                     $("#titolopag").prepend(titolopag);
 
                     
-                    if(json[0].imgSL!=undefined){
-                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[0].imgSL+"\"></div>"
+                    if(json[0].Offerta_idOfferta!=undefined){
+                        var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><a href=\"/SMARTLIFE.html?type=offerta&offerta="+json[0].Offerta_idOfferta+"\" ><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[0].imgSL+"\"></a></div>"
                         $("#cicloofferte").append(div);
                         appoggio= new Array();
                         appoggio.push(json[0].imgSL);
@@ -41,7 +51,7 @@ $( document ).ready(function() {
                                 }
                             }
                             if (verifica!=0){
-                                var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[y].imgSL+"\"></div>"
+                                var div="<div class=\"col-lg-4 col-sm-4 col-xs-12\" style=\" padding:10px;\"><a href=\"/SMARTLIFE.html?type=offerta&offerta="+json[y].Offerta_idOfferta+"\" ><img class=\"zoom2 flex\" src=\"img/SmartLife/"+json[y].imgSL+"\"></a></div>"
                                 $("#cicloofferte").append(div);
                                 appoggio.push(json[y].imgSL);
                             }
@@ -72,13 +82,13 @@ $( document ).ready(function() {
                     
                     
                     if(json[0].Titolo!=undefined){
-                        var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"assistenza.html\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[0].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
+                        var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice="+json[0].Assistenza_idAssistenza+"\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[0].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
                         $("#cicloassistenza").append(div1);
                         appoggio1= new Array();
                         appoggio1.push(json[0].Titolo);
                         
                         
-                        if(json[1].Titolo!=undefined){
+                        if(json.length>0){
                         for(i=1;i<json.length;i++)
                         {
                             verifica=1;
@@ -90,7 +100,7 @@ $( document ).ready(function() {
                                 }
                             }
                             if (verifica!=0){
-                                var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"assistenza.html\" style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[y].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
+                                var div1="<div class=\"col-lg-6 col-sm-6 col-xs-12\"><a href=\"http://rivatardinizizzari.altervista.org/assistenza.html?type=assistenza&codice="+json[y].Assistenza_idAssistenza+"\"  style=\"text-decoration: none\"><div class=\"assistenza\"><h4 class=\"prova\">"+json[y].Titolo+"<div class=\"pull-right\"><span class=\"glyphicon glyphicon-circle-arrow-right\"></span></div></h4></div></a></div>"
                                 $("#cicloassistenza").append(div1);
                                 appoggio1.push(json[y].Titolo);
                             }
@@ -107,5 +117,29 @@ $( document ).ready(function() {
                     
                     
                           })
+                
+                
+                
+                $.getJSON( "php/controlla.php")
+                .done(function(json){
+                    
+                        
+                    if(json[0]=='e'){
+                        
+                        
+                        var prova= "<button type=\"button\" disabled class=\"btn btn-danger btn-large btn-block\" style=\"max-width:300px;\" id=\"submit\" onclick=\"controlla()\">Aggiungi al carrello - devi prima accedere</button>"
+                    }    
+        else{
+            var prova= "<button type=\"button\" class=\"btn btn-primary btn-large btn-block\" style=\"max-width:200px;\" id=\"submit\" onclick=\"controlla()\">Aggiungi al carrello</button>"
+            
+        }
+				
+                    $("#pulsante").append(prova);
+                    
+                   
+                          })
+                
+                
+                
                 .fail(function(){alert("errore")});
                 });

@@ -1,15 +1,15 @@
 <?php
     
 #cerca i prodotti nel carrello
-	if ($_GET["type"]=="carrello" && $_GET["cliente"]==1){
-		$conn = new mysqli('localhost', 'utente', 'password', 'stim');
-		// Check connection
+	if ($_GET["type"]=="carrello"){
+$conn = new mysqli('', '', '', 'my_rivatardinizizzari');
+        // Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		} 
      
     else {
-		$sql = "SELECT idProdotto,IMG_FRONT,Nome,Prezzo FROM Carrello, Prodotto WHERE idProdotto=Prodotto_idProdotto AND Cliente_idCliente=".$_GET["cliente"];
+		$sql = "SELECT idProdotto,IMG_FRONT,Nome,Prezzo FROM carrello, prodotto WHERE idProdotto=Prodotto_idProdotto AND Cliente_idCliente=".$_GET["car"];
 		$result = $conn->query($sql);
         
 
